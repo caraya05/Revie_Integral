@@ -9,7 +9,7 @@ __pypackages__/
 .env
 
 # STATIC AND MEDIA FOLDERS
-static/
+src/static/
 
 */__pycache__/
 
