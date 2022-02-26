@@ -1,7 +1,7 @@
 FROM python:3.8-slim
 ENV PYTHONUNBUFFERED=1
 ENV C_FORCE_ROOT=1
-LABEL Loducode = "pruebas.jcsq@gmail.com"
+LABEL revie = "pruebas.jcsq@gmail.com"
 RUN mkdir /src
 WORKDIR /src
 RUN pip install --upgrade pip

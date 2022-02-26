@@ -28,11 +28,13 @@ THIRD_PARTY_APPS = [
     'import_export',
     'django_filters',
     'geoposition',
+    'users',
     'loducode_utils',
 ]
 
 LOCAL_APPS = [
     'commons',
+    'reviews',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -151,3 +153,6 @@ GEOPOSITION_MARKER_OPTIONS = {
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+AUTH_USER_MODEL = 'users.Person'
