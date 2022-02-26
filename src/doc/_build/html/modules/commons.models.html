@@ -1,0 +1,256 @@
+
+
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>commons models package &#8212; base-backend _ documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="commons admin package" href="commons.admin.html" />
+    <link rel="prev" title="Welcome to bakend’s documentation!" href="../index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="commons.admin.html" title="commons admin package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to bakend’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">base-backend _ documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">commons models package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="commons-models-package">
+<h1>commons models package<a class="headerlink" href="#commons-models-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-commons.models.site_configuration.SiteConfigurationM">
+<span id="siteconfiguration-class"></span><h2>SiteConfiguration class<a class="headerlink" href="#module-commons.models.site_configuration.SiteConfigurationM" title="Permalink to this headline">¶</a></h2>
+<p>Insert a function and its arguments in process pool.</p>
+<p>Input is inserted in queues using a round-robin fashion. Every job is
+identified by and index that is returned by function. Not all parameters
+of original multiprocessing.Pool.apply_aync are implemented so far.</p>
+<dl class="field-list simple">
+<dt class="field-odd">param func</dt>
+<dd class="field-odd"><p>Function to process.</p>
+</dd>
+<dt class="field-even">type func</dt>
+<dd class="field-even"><p>Callable.</p>
+</dd>
+<dt class="field-odd">param args</dt>
+<dd class="field-odd"><p>Arguments for the function to process.</p>
+</dd>
+<dt class="field-even">type args</dt>
+<dd class="field-even"><p>Tuple.</p>
+</dd>
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>Assigned job id.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.pk">
+<span class="sig-prename descclassname"><span class="pre">commons.models.site_configuration.SiteConfigurationM.</span></span><span class="sig-name descname"><span class="pre">pk</span></span><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.pk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="siteconfiguration-contents">
+<h2>SiteConfiguration contents<a class="headerlink" href="#siteconfiguration-contents" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-commons.models.site_configuration"></span><dl class="py class">
+<dt class="sig sig-object py" id="commons.models.site_configuration.Meta">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">commons.models.site_configuration.</span></span><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="../_modules/commons/models/site_configuration.html#Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#commons.models.site_configuration.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.Meta.verbose_name">
+<span class="sig-name descname"><span class="pre">verbose_name</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Sitio</span> <span class="pre">de</span> <span class="pre">configuación'</span></em><a class="headerlink" href="#commons.models.site_configuration.Meta.verbose_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.Meta.verbose_name_plural">
+<span class="sig-name descname"><span class="pre">verbose_name_plural</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'Sitio</span> <span class="pre">de</span> <span class="pre">configuraciónes'</span></em><a class="headerlink" href="#commons.models.site_configuration.Meta.verbose_name_plural" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">commons.models.site_configuration.</span></span><span class="sig-name descname"><span class="pre">SiteConfigurationM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/commons/models/site_configuration.html#SiteConfigurationM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">solo.models.SingletonModel</span></code></p>
+<p>Insert a function and its arguments in process pool.</p>
+<p>Input is inserted in queues using a round-robin fashion. Every job is
+identified by and index that is returned by function. Not all parameters
+of original multiprocessing.Pool.apply_aync are implemented so far.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> (<em>Callable.</em>) – Function to process.</p></li>
+<li><p><strong>args</strong> (<em>Tuple.</em>) – Arguments for the function to process.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Assigned job id.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.image">
+<span class="sig-name descname"><span class="pre">image</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="pre">:</span> <span class="pre">geoposition.fields.GeopositionField</span></em><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.page_facebook_url">
+<span class="sig-name descname"><span class="pre">page_facebook_url</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.page_facebook_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>facebook comentario ajajajaj</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.page_instagram_url">
+<span class="sig-name descname"><span class="pre">page_instagram_url</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.page_instagram_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="commons.models.site_configuration.SiteConfigurationM.page_twitter_url">
+<span class="sig-name descname"><span class="pre">page_twitter_url</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#commons.models.site_configuration.SiteConfigurationM.page_twitter_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="commons.models.site_configuration.create_path_category">
+<span class="sig-prename descclassname"><span class="pre">commons.models.site_configuration.</span></span><span class="sig-name descname"><span class="pre">create_path_category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/commons/models/site_configuration.html#create_path_category"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#commons.models.site_configuration.create_path_category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">commons models package</a><ul>
+<li><a class="reference internal" href="#module-commons.models.site_configuration.SiteConfigurationM">SiteConfiguration class</a></li>
+<li><a class="reference internal" href="#siteconfiguration-contents">SiteConfiguration contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Welcome to bakend’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="commons.admin.html"
+                        title="next chapter">commons admin package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/modules/commons.models.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="commons.admin.html" title="commons admin package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to bakend’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">base-backend _ documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">commons models package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, camilo Suarez.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-13 21:58-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: backend/settings/base.py:140
+msgid "Spanish"
+msgstr "Español"
+
+#: backend/settings/base.py:141
+msgid "English"
+msgstr "Ingles"
+
+#: commons/apps.py:7
+msgid "Commons"
+msgstr "Comunes"
+
+#: commons/models/site_configuration.py:17
+msgid "Page of Facebook"
+msgstr ""
+
+#: commons/models/site_configuration.py:19
+msgid "Page of Twitter"
+msgstr ""
+
+#: commons/models/site_configuration.py:21
+msgid "Page of Instagram"
+msgstr ""
+
+#: commons/models/site_configuration.py:23
+msgid "Location"
+msgstr ""
+
+#: commons/models/site_configuration.py:25
+msgid "Icon"
+msgstr ""
+
+#: commons/models/site_configuration.py:32
+msgid "Site Configuration"
+msgstr "Sitio de configuación"
+
+#: commons/models/site_configuration.py:33
+msgid "Site Configurations"
+msgstr "Sitio de configuraciónes"

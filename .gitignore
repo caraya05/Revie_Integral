@@ -1,0 +1,24 @@
+.idea/
+
+# PYTHON FILES
+__pycache__/
+*.py[cod]
+*$py.class
+__pypackages__/
+
+.env
+
+# STATIC AND MEDIA FOLDERS
+static/
+
+*/__pycache__/
+
+# NGINX LOGS
+nginx/nginx-loc/logs/
+nginx/nginx-pro/logs/
+
+# POSTGRES PGDATA
+postgres/\.pgdata/
+postgres/\.pgdata-test/
+!/postgres/data.zip
+.postgres/

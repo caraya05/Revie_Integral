@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:13.0-alpine
+    env_file: .env
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./.postgres:/var/lib/postgresql/data
+
+  django:
+    build: ./src
+    command: ./django-entrypoint-loc.sh
+    depends_on:
+      - postgres
+    env_file: .env
+    volumes:
+      - ./src:/src/
+    expose:
+      - 8000
+  nginx:
+    image: nginx:latest
+    depends_on:
+      - django
+    ports:
+      - "9000:80"
+      - "443:443"
+    volumes:
+      - ./nginx/loc/conf:/etc/nginx/conf.d/:ro
+      - ./nginx/loc/ssl:/etc/ssl/:ro
+      - ./src/static/:/src/static
+      - ./src/media/:/src/media

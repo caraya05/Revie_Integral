@@ -1,0 +1,29 @@
+#Django DB
+POSTGRES_DB=backend_docker
+POSTGRES_USER=backend_docker_user
+POSTGRES_PASSWORD=backend_docker.
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+
+#Config django
+SECRET_KEY= django-insecure-_33yemiuffdbatcf@w#d!8e7^cj6cn=x^q(*w+mna1reubk_i=
+DEBUG=True
+DJANGO_SETTINGS_MODULE=backend.settings.develop
+
+#Email
+EMAIL_HOST=smtp.gmail.com
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER=pruebas.jcsq@gmail.com
+EMAIL_HOST_PASSWORD=CamiloSuarez04
+DEFAULT_FROM_EMAIL=pruebas.jcsq@gmail.com
+
+#Db_test
+DB_NAME_TEST=backend
+DB_USER_TEST=postgres
+DB_PASS_TEST=123456
+DB_SERVICE_TEST=127.0.0.1
+DB_PORT_TEST=5432
+
+#Geoposition
+GEOPOSITION_GOOGLE_MAPS_API_KEY=AIzaSyBnmNuFL9tmyYs_eCqIjcK8TBwOnM10oVE
