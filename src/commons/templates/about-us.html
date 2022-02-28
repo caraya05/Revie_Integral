@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block postcss %}
+    <link rel="stylesheet" href="{% static 'assets/css/aboutus.compiled.css' %}">
+{% endblock %}
+{% block body %}
+    <section class="mt-5 mb-5">
+        <div id="image_about" class="conten_image_about">
+            <div class="image_about">
+                <div class="div_curtain">
+                    <h1 id="head_about" class="heading_div display-1">Lo mejor de lo mejor</h1>
+                </div>
+            </div>
+        </div>
+        <div id="conten_about" class="conten_info_about">
+            <div class="row justify-content-center conten_info_about mt-5 mb-5">
+                <div class="col-10">
+                    <h1>Revie</h1>
+                </div>
+                <div class="col-10">
+                    <p class="text-start">Es un sitio web en el cual podrás encontrar los mejores lugares con diversos
+                        platillos que quieras conocer, nuestros reseñadores proporcionan la calificación de cada
+                        person.</p>
+                </div>
+                <div class="text-end col-10"><span class="text-start">Confía en nuestros Reviewer&nbsp;</span></div>
+            </div>
+            <div class="row justify-content-center conten_info_about mt-5">
+                <div class="col-10">
+                    <h1>Como se califica</h1>
+                </div>
+                <div class="col-10">
+                    <p class="text-start">La calificación de cada restaurante contiene 4 items que se ponderan, con ello
+                        se califican aspectos importantes de cada restaurante y lograr una calificación en los aspectos
+                        que mayor se tienen en cuenta al momento de buscar un restaurante</p>
+                </div>
+                <div class="text-end col-10 flex-row conten_cali">
+                    <h5 class="cali_about">Comida</h5><img class="image_medal_about"
+                                                           src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{%  static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}">
+                </div>
+                <div class="text-end col-10 flex-row conten_cali">
+                    <h5 class="cali_about">Calidad /precio</h5><img class="image_medal_about"
+                                                                    src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}">
+                </div>
+                <div class="text-end col-10 flex-row conten_cali">
+                    <h4 class="cali_about">atencion</h4><img class="image_medal_about"
+                                                             src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}">
+                </div>
+                <div class="text-end col-10 flex-row conten_cali">
+                    <h4 class="cali_about">ambiente</h4><img class="image_medal_about"
+                                                             src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}"><img
+                        class="image_medal_about" src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

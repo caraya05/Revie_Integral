@@ -27,10 +27,7 @@ class SiteConfigurationM(SingletonModel):
        :returns: Assigned job id.
     """
 
-    page_facebook_url: str = models.CharField(verbose_name=_('Page of Facebook'), max_length=255, blank=True, null=True,
-                                              default='#')
-    '''facebook comentario ajajajaj'''
-    page_twitter_url: str = models.CharField(verbose_name=_('Page of Twitter'), max_length=255, blank=True, null=True,
+    page_twitter_url: str = models.CharField(verbose_name=_('Page of Facebook'), max_length=255, blank=True, null=True,
                                              default='#')
     page_instagram_url: str = models.CharField(verbose_name=_('Page of Instagram'), max_length=255, blank=True,
                                                null=True, default='#')

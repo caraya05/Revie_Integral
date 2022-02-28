@@ -22,6 +22,7 @@ from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
+from commons.views.index_view import IndexView, AboutUsView, MapSiteView
 
 urlpatterns_api = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
@@ -37,6 +38,9 @@ urlpatterns_root = i18n_patterns(
     # path('hijack/', include('hijack.urls', namespace='hijack')),
     path('api/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api-doc/', schema_view, name='api-doc'),  # swagger
+    path('', IndexView.as_view(), name='index'),
+    path('about-us/', AboutUsView.as_view(), name='about'),
+    path('map-site/', MapSiteView.as_view(), name='map_site'),
 )
 urlpatterns = urlpatterns_root + urlpatterns_api + static(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT

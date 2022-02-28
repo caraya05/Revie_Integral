@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block postcss %}
+   <link rel="stylesheet" href="{% static 'assets/css/map_site.compiled.css' %}">
+{% endblock %}
+{% block body %}
+    <section class="mt-5 pt-4">
+        <div class="d-flex flex-column site-map ps-xxl-5 ps-xl-5 ps-lg-5">
+            <div id="olvidar" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" value="Recuperar contraseña">Recuperar contraseña</h5><button class="btn btn-primary buton" type="button" data-bs-dismiss="modal" aria-label="close">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>Escriba el correo registrado</h6>
+                            <form action="{% url 'map_site' %}" method="get"><input class="form-control" type="email" placeholder="Correo" name="email">
+                                <div class="modal-footer"><button class="btn btn-primary buton" role="button" data-bs-dismiss="modal" aria-label="close">Cancelar</button><button class="btn btn-primary buton" type="submit">Enviar</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="list-unstyled text-uppercase w-auto border border-1 rounded-3">
+                <li><a href="{% url 'index' %}" target="_top">Inicio</a>
+                    <ul class="list-unstyled">
+                        <li><a href="restaurant.html" target="_parent">Restaurantes</a></li>
+                        <li><a href="top.html" target="_parent">Top Revie</a></li>
+                        <li><a href="{% url 'about' %}" target="_parent">Quienes somos</a></li>
+                        <li><a href="login.html" target="_parent">Iniciar sesión</a>
+                            <ul class="list-unstyled">
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#olvidar" target="_blank">recuperar contraseña</a></li>
+                                <li><a href="profile_reviewer.html" target="_parent">Mi perfil reviewer</a></li>
+                                <li><a href="profile_restaurant.html" target="_parent">Mi perfil restaurante</a></li>
+                            </ul>
+                        </li>
+                        <li><span>Registrarse</span>
+                            <ul class="list-unstyled">
+                                <li><a href="register_reviewer.html" target="_parent">Registro Reviewer</a></li>
+                                <li><a href="register_restaurant.html" target="_parent">Registro Restaurante</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}

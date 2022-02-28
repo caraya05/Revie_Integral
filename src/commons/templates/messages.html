@@ -1,0 +1,31 @@
+{% load i18n %}
+<script>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success' %}
+                Swal.fire({
+                    title: '{% trans 'Attention' %}',
+                    text: '{{ message }}',
+                    icon: 'success',
+                    showCancelButton: false
+
+                })
+            {% elif message.tags == 'error'%}
+                Swal.fire({
+                    title: '{% trans 'Error' %}',
+                    text: '{{ message }}',
+                    icon: 'error',
+                    showCancelButton: false
+
+                })
+            {% else %}
+               Swal.fire({
+                    title: '{% trans 'Attention' %}',
+                    text: '{{ message }}',
+                    showCancelButton: false,
+                    icon: 'warning'
+                })
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</script>
