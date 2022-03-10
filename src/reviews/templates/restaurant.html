@@ -1,0 +1,276 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block postcss %}
+    <link rel="stylesheet" href="{% static 'assets/css/restaurant.compiled.css' %}">
+{% endblock %}
+{% block body %}
+    <section class="pt-5 mt-5">
+        <div class="filter-principal border border-1 rounded-3">
+            <form class="d-flex filter-conten" method="get" target="_self" enctype="application/x-www-form-urlencoded">
+                <div class="d-flex flex-row conten-search"><input
+                        class="form-control form-control-sm form-control me-2 filter-search w-100" type="search"
+                        aria-label="Search" placeholder="La cofradia ..."></div>
+                <div class="text-end conten-filter"><select class="form-select form-select-sm me-2 filter-select">
+                    <optgroup label="Categoria">
+                        <option value="1">Bar</option>
+                        <option value="2">Mariscos</option>
+                        <option value="3" selected="">Internacional</option>
+                        <option value="4">Callejera</option>
+                        <option value="5">Mexicana</option>
+                    </optgroup>
+                </select><select class="form-select form-select-sm me-2 filter-select">
+                    <optgroup label="Puntuacion">
+                        <option value="12">1</option>
+                        <option value="22">2</option>
+                        <option value="32">3</option>
+                        <option value="42">4</option>
+                        <option value="52" selected="">5</option>
+                    </optgroup>
+                </select>
+                    <button class="btn btn-primary buton" type="submit">Buscar</button>
+                </div>
+            </form>
+        </div>
+        {% for restaurant in object_list %}
+            <article class="d-flex flex-column" style="border-color: #86c1ff;">
+                <!-- Start: Card-figo-class-medal -->
+                <div id="Card-figo-1" class="conten_image_card border border-1 rounded-3">
+                    {% for photo in restaurant.photorestaurant_set.all %}
+                        {% if forloop.counter == 1 %}
+                            <!-- Start: Modal-XL -->
+                            <div id="ModalXL" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                                    aria-label="close">X
+                                            </button>
+                                        </div>
+                                        <div class="modal-body"><img class="img-fluid"
+                                                                     src="{{ photo.photo_one.url }}"></div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Modal-XL -->
+                        {% endif %}
+                        {% if forloop.counter == 2 %}
+                            <!-- Start: Modal-L -->
+                            <div id="ModalL" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                                    aria-label="close">X
+                                            </button>
+                                        </div>
+                                        <div class="modal-body"><img class="img-fluid"
+                                                                     src="{{ photo.photo_one.url }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-dialog modal">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                                    aria-label="close">X
+                                            </button>
+                                        </div>
+                                        <div class="modal-body"><img
+                                                src="{{ photo.photo_one.url }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Modal-L -->
+                        {% endif %}
+                        {% if forloop.counter == 5 %}
+                            <!-- Start: Modal-M -->
+                            <div id="ModalM" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                                    aria-label="close">X
+                                            </button>
+                                        </div>
+                                        <div class="modal-body"><img class="img-fluid"
+                                                                     src="{{ photo.photo_one.url }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Modal-M -->
+                        {% endif %}
+                        {% if forloop.counter == 4 %}
+                            <!-- Start: Modal-S1 -->
+                            <div id="ModalS1" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                                    aria-label="close">X
+                                            </button>
+                                        </div>
+                                        <div class="modal-body"><img class="img-fluid"
+                                                                     src="{{ photo.photo_one.url }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Modal-S1 -->
+                        {% endif %}
+                        {% if forloop.counter == 3 %}
+                            <!-- Start: Modal-S2 -->
+                            <div id="ModalS2" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                                    aria-label="close">X
+                                            </button>
+                                        </div>
+                                        <div class="modal-body"><img class="img-fluid"
+                                                                     src="{{ photo.photo_one.url }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End: Modal-S2 -->
+                        {% endif %}
+                        {% if forloop.counter == 1 %}
+                            <div class="conten_image_xl">
+                            <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="50" data-aos-once="true"
+                                 class="image_xl" data-bs-toggle="modal" data-bs-target="#ModalXL">
+                                <figure class="figure"><img class="figure-img rounded-1"
+                                                            src="{{ photo.photo_one.url }}"></figure>
+                            </div>
+                        {% endif %}
+                    {% if forloop.counter == 2 %}
+                        <div class="conten_image_l">
+                        <div class="align-items-center image_l" data-aos="zoom-in" data-aos-duration="500"
+                             data-aos-delay="150" data-aos-once="true" data-bs-toggle="modal"
+                             data-bs-target="#ModalL">
+                            <figure class="figure"><img class="figure-img rounded-1"
+                                                        src="{{ photo.photo_one.url }}">
+                            </figure>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter == 3 %}
+                        <div class="conten_image_m">
+                        <div class="conten_image_s">
+                        <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="450"
+                             data-aos-once="true" class="image_s_d" data-bs-toggle="modal"
+                             data-bs-target="#ModalS2">
+                            <figure class="figure"><img class="figure-img rounded-1"
+                                                        src="{{ photo.photo_one.url }}">
+                            </figure>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter == 4 %}
+                        <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="350"
+                             data-aos-once="true" class="image_s_i" data-bs-toggle="modal"
+                             data-bs-target="#ModalS1">
+                            <figure class="figure"><img class="figure-img rounded-1"
+                                                        src="{{ photo.photo_one.url }}">
+                            </figure>
+                        </div>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter == 5 %}
+                        <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="250"
+                             data-aos-once="true" class="image_m" data-bs-toggle="modal"
+                             data-bs-target="#ModalM">
+                            <figure class="figure"><img class="figure-img rounded-1"
+                                                        src="{{ photo.photo_one.url }}">
+                            </figure>
+                        </div>
+                        </div>
+                        </div>
+
+                        </div>
+                        <a class="text-decoration-none" href="profile_restaurant.html">
+                            <div class="conten_info">
+                                <h4 data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
+                                    data-aos-once="true"
+                                    class="heading_card text-decoration-none"
+                                    style="font-weight: bold;text-align: left;">
+                                    {{ restaurant.name }}</h4>
+                                <div class="conten_star">
+                                    {% with ''|center:restaurant.score as range %}
+                                        {% for _ in range %}
+                                            <img data-aos="zoom-out" data-aos-duration="450"
+                                                 data-aos-delay="550" data-aos-once="true"
+                                                 class="image_star_card"
+                                                 src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                                 style="padding: 0px;margin: 3px;">
+                                        {% endfor %}
+                                    {% endwith %}
+{#                                    {% if restaurant.score < '5' %}#}
+{#                                        <img data-aos="zoom-out"#}
+{#                                             data-aos-duration="450"#}
+{#                                             data-aos-delay="700"#}
+{#                                             data-aos-once="true"#}
+{#                                             class="image_star_card"#}
+{#                                             src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}"#}
+{#                                             style="padding: 0px;margin: 3px;">#}
+{#                                    {% endif %}#}
+                                    <div data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
+                                         data-aos-once="true"
+                                         class="acount_state_div"><span id="acount_revie-1"
+                                                                        class="text-decoration-none"
+                                                                        style="margin: 7px;">50 Reseñas</span>
+                                        {% if restaurant.status %}
+                                            <span id="state_OC-1" class="state_OC"
+                                                  style="margin: 7px;">Abierto</span>
+                                        {% else %}
+                                            <span id="state_OC-1" class="state_OC"
+                                                  style="margin: 7px;">Cerrado</span>
+                                        {% endif %}
+                                    </div>
+                                    <p data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
+                                       data-aos-once="true"
+                                       class="type_restaurant">{{ restaurant.description }}</p>
+                                    <div data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
+                                         data-aos-once="true"
+                                         class="loca_phone_div"><a class="phone" href="#"><i
+                                            class="fas fa-phone-alt"></i><span
+                                            class="number_phone">3057119562</span></a><a class="location"
+                                                                                         href="#"><i
+                                            class="fas fa-map-marker-alt"></i><span
+                                            class="reference_location">{{ restaurant.location }}</span></a>
+                                    </div>
+                                </div>
+                        </a>
+                        </div><!-- End: Card-figo-class-medal -->
+                    {% endif %}
+                    {% endfor %}
+            </article>
+        {% endfor %}
+
+        <nav aria-label="Page navigation" style="max-width: 303px;margin: auto;">
+            {% if is_paginated %}
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ page_obj.previous_page_number }}"
+                               aria-label="Previous"><span
+                                    aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% for i in paginator.page_range %}
+                        <li {% if page_obj.number == i %} class="active page-item" {% endif %}>
+                            <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                        </li>
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li class="page-item"><a class="page-link"
+                                                 href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            {% endif %}
+        </nav>
+    </section>
+{% endblock %}

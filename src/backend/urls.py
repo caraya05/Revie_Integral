@@ -41,6 +41,7 @@ urlpatterns_root = i18n_patterns(
     path('', IndexView.as_view(), name='index'),
     path('about-us/', AboutUsView.as_view(), name='about'),
     path('map-site/', MapSiteView.as_view(), name='map_site'),
+    path('reviews/', include(('reviews.urls', 'reviews'), namespace='reviews')),
 )
 urlpatterns = urlpatterns_root + urlpatterns_api + static(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT

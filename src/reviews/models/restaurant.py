@@ -33,6 +33,7 @@ class Restaurant(Audit):
     """Points of the restaurant."""
     date_create: datetime = models.DateField(verbose_name=_('Date Create'))
     """Create date of the restaurant."""
+    status: bool = models.BooleanField(verbose_name=_('Status'), default=False)
     objects = RestaurantManager()
 
     class Meta(Audit.Meta):
