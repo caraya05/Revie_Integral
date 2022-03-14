@@ -26,7 +26,7 @@
                 <li><a href="{% url 'index' %}" target="_top">Inicio</a>
                     <ul class="list-unstyled">
                         <li><a href="{% url 'reviews:restaurant_list' %}" target="_parent">Restaurantes</a></li>
-                        <li><a href="top.html" target="_parent">Top Revie</a></li>
+                        <li><a href="{% url 'reviews:restaurant_top' %}" target="_parent">Top Revie</a></li>
                         <li><a href="{% url 'about' %}" target="_parent">Quienes somos</a></li>
                         <li><a href="login.html" target="_parent">Iniciar sesión</a>
                             <ul class="list-unstyled">

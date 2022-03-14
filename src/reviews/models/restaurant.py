@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from geoposition.fields import GeopositionField
@@ -29,11 +30,15 @@ class Restaurant(Audit):
     """Official website of the restaurant."""
     description: str = models.TextField(verbose_name=_('Description'), null=True, blank=True)
     """Field to detail the status of restaurant."""
-    score: str = models.CharField(verbose_name=_('Score'), max_length=10, blank=True, null=True, default='0')
+    score: int = models.IntegerField(verbose_name=_('Score'), blank=True, null=True, default=1, validators=[
+        MinValueValidator(1), MaxValueValidator(5)
+    ])
     """Points of the restaurant."""
     date_create: datetime = models.DateField(verbose_name=_('Date Create'))
     """Create date of the restaurant."""
     status: bool = models.BooleanField(verbose_name=_('Status'), default=False)
+
+    # top: int = models.IntegerField(verbose_name=_('Number Top'), blank=True, null=True, default=0)
     objects = RestaurantManager()
 
     class Meta(Audit.Meta):

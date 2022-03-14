@@ -11,4 +11,3 @@ class RestaurantAdmin(AuditAdmin):
     search_fields = ('name', 'nit',)
     ordering = ('name',)
     list_filter = ('name',)
-
