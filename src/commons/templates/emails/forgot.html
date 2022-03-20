@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0px !important;
+        }
+
+        .total-main {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul {
+            height: 100px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333646;
+        }
+
+        li img {
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            height: 60px;
+            width: 200px;
+        }
+
+        .main-center {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .main-center h2 {
+            margin-bottom: 50px;
+        {#font-family: Inter;#} font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+            color: #242F57;
+        }
+
+        h5 {
+        {#font-family: Inter;#}
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            color: #636E95;
+        }
+
+        .footer-img {
+            width: 100%;
+            text-align: right;
+        }
+
+        .footer-img img {
+            padding-bottom: 20px;
+            height: 60px;
+            width: 200px;
+
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap"
+          rel="stylesheet"></link>
+</head>
+
+<body>
+<div class="total-main">
+    <div class="main-center">
+        <h2 class="title-body">Hola {{ get_full_name }}</h2>
+        <h5> Tu correo es: {{ profile }}
+            <br>
+            Se ha asignado una contraseña para tu recuperación: {{ password }}
+        </h5>
+    </div>
+</div>
+</body>
+
+</html>

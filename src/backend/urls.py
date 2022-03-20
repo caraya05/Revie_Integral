@@ -22,7 +22,7 @@ from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
-from commons.views.index_view import IndexView, AboutUsView, MapSiteView
+from commons.views.index_view import IndexView, AboutUsView, MapSiteView, Login, forgot_password, Logout
 
 urlpatterns_api = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
@@ -41,6 +41,9 @@ urlpatterns_root = i18n_patterns(
     path('', IndexView.as_view(), name='index'),
     path('about-us/', AboutUsView.as_view(), name='about'),
     path('map-site/', MapSiteView.as_view(), name='map_site'),
+    path('login/', Login.as_view(), name='login'),
+    path('logout/', Logout.as_view(), name='logout'),
+    path('forgot-user/', forgot_password, name='forgot'),
     path('reviews/', include(('reviews.urls', 'reviews'), namespace='reviews')),
 )
 urlpatterns = urlpatterns_root + urlpatterns_api + static(

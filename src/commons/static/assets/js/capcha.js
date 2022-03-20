@@ -1,14 +1,8 @@
-
 var elements = document.querySelectorAll(".element");
 var colorSelected = document.querySelector("#colorSelected");
 var buton = document.querySelector("#login_buton");
 var colorx = 0;
 let number = [];
-var toastCap = document.getElementById('ErrorCap');
-var toastCamp = document.getElementById('ErrorCamp');
-var toastCapSel = document.getElementById('ErrorCapSel');
-var toastCapSel = document.getElementById('ErrorCapSelno');
-var toastExi = document.getElementById('exito');
 var option = {
     animation: true,
     delay: 2000
@@ -49,43 +43,27 @@ function getRandomcolor() {
 
 function validar() {
     console.log(colorx);
-    var user = document.getElementById("email").value;
-    var pass = document.getElementById("password").value;
-    console.log(user);
-    console.log(user);
-    if (colorx === colorSelected.innerHTML && user == "reviewer@revie.com" && pass == "1234") {
-        var toastElement = new bootstrap.Toast(toastExi, option);
-        toastElement.show();
-        setTimeout(() => {
-            return true
-        }, 2000);
-
+    console.log("me tengo que ir");
+    if (colorx === colorSelected.innerHTML) {
+       document.getElementById('formLogi').submit();
     }
-    if (colorx === colorSelected.innerHTML && user == 'restaurant@revie.com' && pass == '1234') {
-        var toastElement = new bootstrap.Toast(toastExi, option);
-        toastElement.show();
-        setTimeout(() => {
-            console.log()
-        }, 2000);
-        return true;
-    }
-    if (colorx != "0" && user != "reviewer@revie.com" && pass == "1234" || colorx != "0" && user == "reviewer@revie.com" && pass != "1234" || colorx != "0" && user != "reviewer@revie.com" && pass != "1234") {
-        var toastElement = new bootstrap.Toast(toastCamp, option);
-        toastElement.show();
+    if (colorx != "0") {
+        Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Recuerda que debes darnos toda la informacion solicitada.'
+        })
         return false;
     }
-    if (colorx != colorSelected.innerHTML && user == 'restaurant@revie.com' && pass == '1234' || colorx != colorSelected.innerHTML && user == "reviewer@revie.com" && pass == "1234") {
-        var toastElement = new bootstrap.Toast(toastCapSel, option);
-        toastElement.show();
+    if (colorx != colorSelected.innerHTML) {
+        Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Vuelve a intentarlo'
+        })
         setTimeout(() => {
             location.reload(true)
         }, 10000);
 
-    }
-
-    if (colorx != "0" && user == 'restaurant@revie.com' && pass == '1234' || colorx != "0" && user == "reviewer@revie.com" && pass == "1234") {
-        var toastElement = new bootstrap.Toast(toastCapSelno, option);
-        toastElement.show();
-        return false;
     }
 }
