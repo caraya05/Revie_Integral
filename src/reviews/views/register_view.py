@@ -29,25 +29,3 @@ class RegisterReviewerView(CreateView):
         context['user_authenticate'] = str(self.request.user)
         return context
 
-
-class CreView(CreateView):
-    model = Person
-    form_class = ReviewerForm
-    template_name = "otro.html"
-    success_url = reverse_lazy('login')
-    print("pinche formulario")
-
-    def form_valid(self, form):
-        print("selffff", self.object)
-        print("formmmm", form.email)
-        form.save()  # pylint: disable=W0707 W0201
-        email = form.cleaned_data.get('email')
-        password = form.cleaned_data.get('password1')
-        user = authenticate(username=email, password=password)
-        login(self.request, user)
-        return HttpResponseRedirect(reverse_lazy('login'))
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['user_authenticate'] = str(self.request.user)
-        return context
