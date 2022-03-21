@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from typing import Optional
 
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -58,6 +59,10 @@ class Review(Audit):
     score_quality_price: str = models.CharField(verbose_name=_('Score Quality Price'), max_length=5,
                                                 choices=SCORE_CHOICES, default='0')
     """score of the quality price."""
+
+    place: Optional = models.ForeignKey(to='reviews.restaurant', verbose_name='restaurant', on_delete=models.CASCADE)
+
+    person: Optional = models.ForeignKey(to='users.person', verbose_name='person', on_delete=models.CASCADE)
 
     objects = ReviewManager()
 

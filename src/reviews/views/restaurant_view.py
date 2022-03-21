@@ -5,7 +5,6 @@ from reviews.models import Restaurant
 
 class RestaurantView(ListView):
     model = Restaurant
-    # login_url = "/login"
     template_name = "restaurant.html"
     paginate_by = 5
 

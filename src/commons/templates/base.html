@@ -64,7 +64,7 @@
     <!-- Start: Navigation with Button -->
     <nav class="navbar navbar-light navbar-expand-xl navigation-clean-button fixed-top bg-light py-1 border-0">
         <div class="container"><a class="navbar-brand conten_nav" href="{% url 'index' %}"><img class="logo_nav"
-                                                                                         src="{% static 'assets/img/LogoCLSB/logo-nav.png' %}"></a>
+                                                                                                src="{% static 'assets/img/LogoCLSB/logo-nav.png' %}"></a>
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span
                     class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
@@ -73,7 +73,8 @@
                             class="span_nav">Inicio</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'reviews:restaurant_list' %}"><span
                             class="span_nav">Restaurantes</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'reviews:restaurant_top' %}"><span class="span_nav">Top revie</span></a>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'reviews:restaurant_top' %}"><span
+                            class="span_nav">Top revie</span></a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><span
                             class="span_nav">Quienes Somos</span></a></li>
@@ -88,23 +89,27 @@
                         </a>
                             <div class="dropdown-menu"><a class="dropdown-item span_nav" href="#"
                                                           style="font-size: 80%;">PERFIL</a><a
-                                    class="dropdown-item span_nav" href="{% url 'logout' %}" style="font-size: 80%;">CERRAR SESION</a>
+                                    class="dropdown-item span_nav" href="{% url 'logout' %}" style="font-size: 80%;">CERRAR
+                                SESION</a>
                             </div>
                         </li>
                     {% endif %}
                 </ul>
                 {% if not user.is_authenticated %}
-                    <span class="navbar-text actions"> <a class="stretched-link buton-outline login"
+                    <a class="navbar-text actions"> <a class="stretched-link buton-outline login"
                                                           href="{% url 'login' %}"
-                                                          role="button"><span class="link">Iniciar sesion</span></a><button
-                            class="btn btn-primary buton" type="button" data-bs-toggle="modal"
-                            data-bs-target="#elegir">Registrarse</button></span>
+                                                          role="button"><span class="link">Iniciar sesion</span></a>
+                        <a class="btn btn-primary buton" type="button"
+                           href="{% url 'reviews:register_reviewer' %}">
+                        <span class="link">Registrarse</span></a>
                 {% endif %}
             </div>
         </div>
     </nav><!-- End: Navigation with Button -->
 </header>
 {% block body %}
+
+
 {% endblock %}
 <footer>
     <!-- Start: Footer Dark -->
@@ -140,7 +145,8 @@
                         comida de tu localidad</p>
                 </div><!-- End: Footer Text -->
                 <!-- Start: Social Icons -->
-                <div class="col item social"><a href="{{ site_config.page_twitter_url }}"><i class="icon ion-social-twitter"></i></a><a href="{{ site_config.page_instagram_url }}"><i
+                <div class="col item social"><a href="{{ site_config.page_twitter_url }}"><i
+                        class="icon ion-social-twitter"></i></a><a href="{{ site_config.page_instagram_url }}"><i
                         class="icon ion-social-instagram"></i></a></div><!-- End: Social Icons -->
             </div><!-- Start: Copyright -->
             <p class="copyright">Revie © 2021</p><!-- End: Copyright -->
