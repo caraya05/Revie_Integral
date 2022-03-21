@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 21:58-0500\n"
+"POT-Creation-Date: 2022-03-21 16:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: backend/settings/base.py:140
+#: backend/settings/_base.py:140
 msgid "Spanish"
 msgstr ""
 
-#: backend/settings/base.py:141
+#: backend/settings/_base.py:141
 msgid "English"
 msgstr ""
 
@@ -30,30 +30,252 @@ msgstr ""
 msgid "Commons"
 msgstr ""
 
-#: commons/models/site_configuration.py:17
-msgid "Page of Facebook"
+#: commons/forms/login_form.py:10 reviews/forms/reviewer_fom.py:45
+msgid "Enter your email"
 msgstr ""
 
-#: commons/models/site_configuration.py:19
+#: commons/forms/login_form.py:11 reviews/forms/reviewer_fom.py:42
+msgid "Email"
+msgstr ""
+
+#: commons/forms/login_form.py:15 reviews/forms/reviewer_fom.py:22
+msgid "Enter your password"
+msgstr ""
+
+#: commons/forms/login_form.py:17 reviews/forms/reviewer_fom.py:20
+msgid "Password"
+msgstr ""
+
+#: commons/models/site_configuration.py:30
 msgid "Page of Twitter"
 msgstr ""
 
-#: commons/models/site_configuration.py:21
+#: commons/models/site_configuration.py:32
 msgid "Page of Instagram"
 msgstr ""
 
-#: commons/models/site_configuration.py:23
+#: commons/models/site_configuration.py:34 reviews/models/restaurant.py:27
 msgid "Location"
 msgstr ""
 
-#: commons/models/site_configuration.py:25
+#: commons/models/site_configuration.py:36
 msgid "Icon"
 msgstr ""
 
-#: commons/models/site_configuration.py:32
+#: commons/models/site_configuration.py:45
 msgid "Site Configuration"
 msgstr ""
 
-#: commons/models/site_configuration.py:33
+#: commons/models/site_configuration.py:46
 msgid "Site Configurations"
+msgstr ""
+
+#: commons/templates/messages.html:7 commons/templates/messages.html:23
+msgid "Attention"
+msgstr ""
+
+#: commons/templates/messages.html:15
+msgid "Error"
+msgstr ""
+
+#: commons/views/index_view.py:51
+msgid "Usuario o contraseña invalidos"
+msgstr ""
+
+#: commons/views/index_view.py:68
+msgid "Recovery password"
+msgstr ""
+
+#: commons/views/index_view.py:81 commons/views/index_view.py:83
+msgid "Email validate, has been sent to the mail the new password."
+msgstr ""
+
+#: reviews/apps.py:7 reviews/models/review.py:71
+msgid "Reviews"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:13
+msgid "M"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:14
+msgid "T"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:15
+msgid "F"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:27
+msgid "Password confirmation"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:30
+msgid "Enter the password again"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:34 reviews/models/restaurant.py:21
+#: users/models/person.py:32
+msgid "Name"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:37
+msgid "Enter your name"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:38 users/models/person.py:34
+msgid "Last Name"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:39
+msgid "Enter your last name"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:49
+msgid "Phone number"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:50
+msgid "Enter your phone number"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:52 reviews/models/restaurant.py:31
+#: reviews/models/review.py:46 users/models/person.py:44
+msgid "Description"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:53
+msgid "Enter your description"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:56 users/models/person.py:36
+msgid "Age"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:56
+msgid "Enter your age"
+msgstr ""
+
+#: reviews/forms/reviewer_fom.py:61 users/models/person.py:38
+msgid "Gender"
+msgstr ""
+
+#: reviews/models/photo_restaurant.py:30 reviews/models/photo_review.py:30
+msgid "Photo One"
+msgstr ""
+
+#: reviews/models/photo_restaurant.py:33 reviews/models/photo_review.py:33
+msgid "Order"
+msgstr ""
+
+#: reviews/models/photo_restaurant.py:38
+msgid "Photo Restaurant"
+msgstr ""
+
+#: reviews/models/photo_restaurant.py:39
+msgid "Photos Restaurants"
+msgstr ""
+
+#: reviews/models/photo_review.py:38
+msgid "Photo Review"
+msgstr ""
+
+#: reviews/models/photo_review.py:39
+msgid "Photos Reviews"
+msgstr ""
+
+#: reviews/models/restaurant.py:23
+msgid "NIT"
+msgstr ""
+
+#: reviews/models/restaurant.py:25 users/models/person.py:40
+msgid "Phone"
+msgstr ""
+
+#: reviews/models/restaurant.py:29
+msgid "Web Site"
+msgstr ""
+
+#: reviews/models/restaurant.py:33 reviews/models/top_restaurant.py:15
+msgid "Score"
+msgstr ""
+
+#: reviews/models/restaurant.py:37
+msgid "Date Create"
+msgstr ""
+
+#: reviews/models/restaurant.py:39
+msgid "Status"
+msgstr ""
+
+#: reviews/models/restaurant.py:45 reviews/models/top_restaurant.py:12
+msgid "Restaurant"
+msgstr ""
+
+#: reviews/models/restaurant.py:46
+msgid "Restaurants"
+msgstr ""
+
+#: reviews/models/review.py:42
+msgid "Title"
+msgstr ""
+
+#: reviews/models/review.py:44
+msgid "date"
+msgstr ""
+
+#: reviews/models/review.py:48
+msgid "Score Service"
+msgstr ""
+
+#: reviews/models/review.py:51
+msgid "Score Food"
+msgstr ""
+
+#: reviews/models/review.py:55
+msgid "Score Environment"
+msgstr ""
+
+#: reviews/models/review.py:59
+msgid "Score Quality Price"
+msgstr ""
+
+#: reviews/models/review.py:70
+msgid "Review"
+msgstr ""
+
+#: reviews/models/top_restaurant.py:14
+msgid "Number Top"
+msgstr ""
+
+#: reviews/models/top_restaurant.py:19
+msgid "Top Restaurant"
+msgstr ""
+
+#: reviews/models/top_restaurant.py:20
+msgid "Top Restaurants"
+msgstr ""
+
+#: users/apps.py:7
+msgid "Users"
+msgstr ""
+
+#: users/managers/person_manager.py:13 users/managers/person_manager.py:26
+msgid "The given email must be set"
+msgstr ""
+
+#: users/managers/person_manager.py:47
+msgid "The given phone must be set"
+msgstr ""
+
+#: users/models/person.py:42
+msgid "Photo"
+msgstr ""
+
+#: users/models/person.py:54
+msgid "Person"
+msgstr ""
+
+#: users/models/person.py:55
+msgid "Persons"
 msgstr ""

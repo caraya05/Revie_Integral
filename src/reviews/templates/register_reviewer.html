@@ -8,7 +8,7 @@
 
     <section class="mt-5 pt-5">
         <article class="conten_info_register d-grid align-items-center justify-items-center">
-            <form id="form_regis" class="" action="{{ request.get_full_path }}" method="post">
+            <form id="form_regis" class="" action="{{ request.get_full_path }}" method="POST">
                 {% csrf_token %}
                 {% if form %}
                     <div id="register_reviewer" class="all_info">
@@ -20,12 +20,12 @@
                                     <span
                                             id="basic-addon1" class="input-group-text " aria-label="Username"
                                             aria-describedby="basic-addon1">{{ form.first_name.label }}</span>
-{#                                    <div class="invalid-tooltip">#}
-{#                                        Ingrese un nombre valido!#}
-{#                                    </div>#}
-{#                                    <div class="valid-tooltip">#}
-{#                                        Excelente!#}
-{#                                    </div>#}
+                                    <div class="invalid-tooltip">
+                                        Ingrese un nombre valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
                                 </div>
                                 <div class="input-group input-group-sm mb-3" {{ form.prefix }}>
                                     {{ form.last_name }}
@@ -33,12 +33,12 @@
                                           class="input-group-text"
                                           aria-label="Username"
                                           aria-describedby="basic-addon1">{{ form.last_name.label }}</span>
-{#                                    <div class="invalid-tooltip">#}
-{#                                        Ingrese un apellido valido!#}
-{#                                    </div>#}
-{#                                    <div class="valid-tooltip">#}
-{#                                        Excelente!#}
-{#                                    </div>#}
+                                    <div class="invalid-tooltip">
+                                        Ingrese un apellido valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
                                 </div>
                             </div>
                             <div class="input-group input-group-sm mb-3 {{ form.prefix }}"><span id="basic-addon-2"
@@ -46,12 +46,12 @@
                                                                                                  aria-label="Username"
                                                                                                  aria-describedby="basic-addon1">{{ form.email.label }}</span>
                                 {{ form.email }}
-{#                                <div class="invalid-tooltip">#}
-{#                                    Ingrese un correo valido!#}
-{#                                </div>#}
-{#                                <div class="valid-tooltip">#}
-{#                                    Excelente!#}
-{#                                </div>#}
+                                <div class="invalid-tooltip">
+                                    Ingrese un correo valido!
+                                </div>
+                                <div class="valid-tooltip">
+                                    Excelente!
+                                </div>
                             </div>
                             <div class="input-group input-group-sm mb-3 {{ form.prefix }}">
                                 {{ form.password1 }}
@@ -59,12 +59,12 @@
                                       class="input-group-text"
                                       aria-label="Username"
                                       aria-describedby="basic-addon1">{{ form.password1.label }}</span>
-{#                                <div class="invalid-tooltip">#}
-{#                                    Ingrese una constraseña valida!#}
-{#                                </div>#}
-{#                                <div class="valid-tooltip">#}
-{#                                    Excelente!#}
-{#                                </div>#}
+                                <div class="invalid-tooltip">
+                                    Ingrese una constraseña valida!
+                                </div>
+                                <div class="valid-tooltip">
+                                    Excelente!
+                                </div>
 
                             </div>
                             <span class="fs-6 col-full">
@@ -73,12 +73,12 @@
                                 <span id="basic-addon-4" class="input-group-text" aria-label="Username"
                                       aria-describedby="basic-addon1">{{ form.password2.label }}</span>
                                 {{ form.password2 }}
-{#                                <div class="invalid-tooltip">#}
-{#                                    Ingrese una contraseña valida!#}
-{#                                </div>#}
-{#                                <div class="valid-tooltip">#}
-{#                                    Excelente!#}
-{#                                </div>#}
+                                <div class="invalid-tooltip">
+                                    Ingrese una contraseña valida!
+                                </div>
+                                <div class="valid-tooltip">
+                                    Excelente!
+                                </div>
                             </div>
                             <span class="fs-6 col-full">
                                       {{ form.password2.help_text }}</span>
@@ -87,12 +87,12 @@
                                 <span id="basic-addon-6" class="input-group-text"
                                       aria-label="Username"
                                       aria-describedby="basic-addon1">{{ form.phone.label }}</span>
-{#                                <div class="invalid-tooltip">#}
-{#                                    Ingrese un telefono valido!#}
-{#                                </div>#}
-{#                                <div class="valid-tooltip">#}
-{#                                    Excelente!#}
-{#                                </div>#}
+                                <div class="invalid-tooltip">
+                                    Ingrese un telefono valido!
+                                </div>
+                                <div class="valid-tooltip">
+                                    Excelente!
+                                </div>
                             </div>
                             <div class="compar">
                                 <div class="input-group input-group-sm mb-3 {{ form.prefix }}">
@@ -101,12 +101,12 @@
                                           aria-label="Username"
                                           aria-describedby="basic-addon1">{{ form.age.label }}</span>
                                     {{ form.age }}
-{#                                    <div class="invalid-tooltip">#}
-{#                                        Ingrese una valida valido!#}
-{#                                    </div>#}
-{#                                    <div class="valid-tooltip">#}
-{#                                        Excelente!#}
-{#                                    </div>#}
+                                    <div class="invalid-tooltip">
+                                        Ingrese una valida valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
                                 </div>
                                 <div class="input-group input-group-sm mb-3 {{ form.prefix }}">
                                     <span id="basic-addon-7"
@@ -114,12 +114,12 @@
                                           aria-label="Username"
                                           aria-describedby="basic-addon1">{{ form.gender.label }}</span>
                                     {{ form.gender }}
-{#                                    <div class="invalid-tooltip">#}
-{#                                        Seleccione un sexo valido!#}
-{#                                    </div>#}
-{#                                    <div class="valid-tooltip">#}
-{#                                        Excelente!#}
-{#                                    </div>#}
+                                    <div class="invalid-tooltip">
+                                        Seleccione un sexo valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
                                 </div>
                             </div>
                         </div>
