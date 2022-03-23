@@ -9,7 +9,7 @@ from users.managers.person_manager import PersonManager
 
 def create_path_reviewer(instance, filename):
     return os.path.join(
-        instance.name, instance.lastname,
+        instance.first_name, instance.last_name,
         filename
     )
 
@@ -55,7 +55,7 @@ class Person(AbstractUser):
         verbose_name_plural = _('Persons')
 
     def __str__(self):
-        return f'{self.email}'
+        return f'{self.first_name}'
 
     # @staticmethod
     # def autocomplete_search_fields():

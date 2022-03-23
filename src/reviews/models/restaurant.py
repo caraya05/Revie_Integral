@@ -30,12 +30,25 @@ class Restaurant(Audit):
     """Official website of the restaurant."""
     description: str = models.TextField(verbose_name=_('Description'), null=True, blank=True)
     """Field to detail the status of restaurant."""
+    category: str = models.TextField(verbose_name=_('Category'), null=True, blank=True)
+    """Field to detail the status of restaurant."""
     score: int = models.IntegerField(verbose_name=_('Score'), blank=True, null=True, default=1, validators=[
-        MinValueValidator(1), MaxValueValidator(5)
-    ])
-    """Points of the restaurant."""
+        MinValueValidator(0), MaxValueValidator(5)])
+    score_service: int = models.IntegerField(verbose_name=_('Score Service'), validators=[
+        MinValueValidator(0), MaxValueValidator(5)], default=0)
+    score_food: int = models.IntegerField(verbose_name=_('Score Food'), validators=[
+        MinValueValidator(0), MaxValueValidator(5)], default=0)
+    score_environment: int = models.IntegerField(verbose_name=_('Score Environment'), validators=[
+        MinValueValidator(0), MaxValueValidator(5)], default=0)
+
+    score_quality_price: int = models.IntegerField(verbose_name=_('Score Quality Price'), validators=[
+        MinValueValidator(0), MaxValueValidator(5)], default=0)
+
     date_create: datetime = models.DateField(verbose_name=_('Date Create'))
-    """Create date of the restaurant."""
+
+    count_reviews: int = models.IntegerField(verbose_name=_('Count Reviews'), validators=[
+        MinValueValidator(0)], default=0)
+
     status: bool = models.BooleanField(verbose_name=_('Status'), default=False)
 
     # top: int = models.IntegerField(verbose_name=_('Number Top'), blank=True, null=True, default=0)
