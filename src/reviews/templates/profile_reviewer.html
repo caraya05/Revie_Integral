@@ -6,456 +6,393 @@
     <link rel="stylesheet" href="{% static 'assets/css/untitled.css' %}">
 {% endblock %}
 {% block body %}
-    <header>
-        <div id="elegir" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" value="Recuperar contraseña">Elegir usuario</h5>
-                        <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal" aria-label="close">
-                            X
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>Elige entre ser reseñador o restaurante</h6>
-                        <div class="conten_register"><a href="register_reviewer.html">
-                            <button class="btn btn-primary buton buton_re" type="button"><i
-                                    class="material-icons icon_register">person</i></button>
-                        </a><a href="register_restaurant.html">
-                            <button class="btn btn-primary buton buton_re" type="button"><i
-                                    class="material-icons icon_register">restaurant</i></button>
-                        </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navbar navbar-light navbar-expand-xl navigation-clean-button fixed-top bg-light py-1 border-0">
-            <div class="container"><a class="navbar-brand conten_nav" href="index.html"><img class="logo_nav"
-                                                                                             src="assets/img/LogoCLSB/logo-nav.png"></a>
-                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span
-                        class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navcol-2">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link nav_web" href="index.html"><span
-                                class="span_nav">Inicio</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="restaurant.html"><span class="span_nav">Restaurantes</span></a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="top.html"><span class="span_nav">Top revie</span></a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="aboutus.html"><span class="span_nav">Quienes Somos</span></a>
-                        </li>
-                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false"
-                                                         data-bs-toggle="dropdown" href="#" target="_parent">cuenta
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                                 viewBox="0 0 16 16" class="bi bi-person ms-2 me-2"
-                                 style="transform: translate(0px) scale(1.70);">
-                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"></path>
-                            </svg>
-                        </a>
-                            <div class="dropdown-menu"><a class="dropdown-item span_nav" href="#"
-                                                          style="font-size: 80%;">PERFIL</a><a
-                                    class="dropdown-item span_nav" href="#" style="font-size: 80%;">CERRAR SESION</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <span class="navbar-text actions"> <a class="stretched-link buton-outline login" href="login.html"
-                                                          role="button"><span class="link">Iniciar sesion</span></a><button
-                            class="btn btn-primary buton" type="button" data-bs-toggle="modal" data-bs-target="#elegir">Registrarse</button></span>
-                </div>
-            </div>
-        </nav>
-    </header>
     <section class="mt-5 pt-5">
-        <div id="form-register" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" value="Recuperar contraseña">informacion</h5>
-                        <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal" aria-label="close">
-                            X
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>Escriba el correo registrado</h6>
-                        <form class="needs-validation" novalidate="" method="post" target="_self"
-                              enctype="application/x-www-form-urlencoded">
-                            <div class="input-group input-group-sm mb-3"><input
-                                    class="form-control form-control-sm input_register" type="text" placeholder="Carlos"
-                                    autocomplete="on" name="fname" required=""><span id="basic-addon1"
-                                                                                     class="input-group-text"
-                                                                                     aria-label="Username"
-                                                                                     aria-describedby="basic-addon1">Nombre</span>
-                                <div class="invalid-tooltip">
-                                    Ingrese un nombre valido!
-                                </div>
-                                <div class="valid-tooltip">
-                                    Excelente!
-                                </div>
-                            </div>
-                            <div class="input-group input-group-sm mb-3"><input
-                                    class="form-control form-control-sm input_register" type="text" placeholder="Amaya"
-                                    autocomplete="on" name="lname" required=""><span id="basic-addon-1"
-                                                                                     class="input-group-text"
-                                                                                     aria-label="Username"
-                                                                                     aria-describedby="basic-addon1">Apellido</span>
-                                <div class="invalid-tooltip">
-                                    Ingrese un apellido valido!
-                                </div>
-                                <div class="valid-tooltip">
-                                    Excelente!
-                                </div>
-                            </div>
-                            <div class="input-group input-group-sm mb-3"><span id="basic-addon-2"
-                                                                               class="input-group-text"
-                                                                               aria-label="Username"
-                                                                               aria-describedby="basic-addon1">Correo</span><input
-                                    class="form-control form-control-sm input_register" type="email"
-                                    placeholder="ejemplo@gmail.com" autocomplete="on" name="email" required="">
-                                <div class="invalid-tooltip">
-                                    Ingrese un correo valido!
-                                </div>
-                                <div class="valid-tooltip">
-                                    Excelente!
-                                </div>
-                            </div>
-                            <div class="input-group input-group-sm mb-3"><input
-                                    class="form-control form-control-sm input_register" type="password"
-                                    placeholder="1*dS******" name="password" required=""><span id="basic-addon-3"
-                                                                                               class="input-group-text"
-                                                                                               aria-label="Username"
-                                                                                               aria-describedby="basic-addon1">Contraseña</span>
-                                <div class="invalid-tooltip">
-                                    Ingrese una constraseña valida!
-                                </div>
-                                <div class="valid-tooltip">
-                                    Excelente!
-                                </div>
-                            </div>
-                            <div class="input-group input-group-sm mb-3"><input
-                                    class="form-control form-control-sm input_register" type="tel"
-                                    placeholder="3000000000" name="telephone" required=""><span id="basic-addon-6"
-                                                                                                class="input-group-text"
-                                                                                                aria-label="Username"
-                                                                                                aria-describedby="basic-addon1">Teléfono</span>
-                                <div class="invalid-tooltip">
-                                    Ingrese un telefono valido!
-                                </div>
-                                <div class="valid-tooltip">
-                                    Excelente!
-                                </div>
-                            </div>
-                            <div class="input-group input-group-sm mb-3"><span id="basic-addon-5"
-                                                                               class="input-group-text"
-                                                                               aria-label="Username"
-                                                                               aria-describedby="basic-addon1">Edad</span><input
-                                    class="form-control form-control-sm input_register" type="number" placeholder="12"
-                                    name="age" required="" min="1">
-                                <div class="invalid-tooltip">
-                                    Ingrese una valida valido!
-                                </div>
-                                <div class="valid-tooltip">
-                                    Excelente!
-                                </div>
-                            </div>
-                            <div class="input-group input-group-sm mb-3"><span id="basic-addon-7"
-                                                                               class="input-group-text"
-                                                                               aria-label="Username"
-                                                                               aria-describedby="basic-addon1">Sexo</span><select
-                                    class="form-select form-select-sm" placeholder="sexo" required value="sexo">
-                                <option selected disabled value="">Sexo</option>
-                                <option value="M">M</option>
-                                <option value="T">T</option>
-                                <option value="F">F</option>
-                            </select>
-                                <div class="invalid-tooltip">
-                                    Seleccione un sexo valido!
-                                </div>
-                                <div class="valid-tooltip">
-                                    Excelente!
-                                </div>
-                            </div>
-                            <div class="input-group input-group-sm mb-3"><span id="basic-addon-8"
-                                                                               class="input-group-text"
-                                                                               aria-label="Username"
-                                                                               aria-describedby="basic-addon1">Fotografia</span><input
-                                    class="form-control" type="file" accept="image/jpg, image/jpeg, image/png"></div>
-                            <div id="descrip" class="input-group input-group-sm mb-3"><textarea
-                                    class="form-control input_des" row="1"></textarea><span class="input-group-text"
-                                                                                            aria-label="Username"
-                                                                                            aria-describedby="basic-addon1">Descripccion</span>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-primary buton" type="submit">Enviar</button>
-                            </div>
-                        </form>
+        {% if object %}
+            <div id="form-register" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" value="Recuperar contraseña">informacion</h5>
+                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                    aria-label="close">
+                                X
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="principal-conten">
-            <div class="conten-info">
-                <div class="filter rounded-3">
-                    <div class="conten-profile">
-                        <button class="btn btn-primary buton buton-edit" type="button" data-bs-toggle="modal"
-                                data-bs-target="#form-register"><i class="far fa-edit"
-                                                                   style="transform: scale(1.55);"></i></button>
-                        <div class="info-reviewer"><img class="photo-reviewer rounded-circle"
-                                                        src="assets/img/profile/profile2.jpg">
-                            <h2 class="text-center m-2">carlos amaya</h2>
+            <div class="principal-conten">
+                <div class="conten-info">
+                    <div class="filter rounded-3">
+                        <div class="conten-profile">
+                            <a class="btn btn-primary buton buton-edit" type="button"
+                               href="{% url 'reviews:update_reviewer' pk=user.id %}"><i class="far fa-edit"
+                                                                                        style="transform: scale(1.55);"></i></a>
+                            <div class="info-reviewer">
+                                {% if object.photo %}
+                                    <img class="photo-reviewer rounded-circle"
+                                         src="{{ object.photo.url }}">
+                                {% else %}
+                                    <img class="photo-reviewer rounded-circle"
+                                         src="{% static 'assets/img/LogoEG/reviestartgris.png' %}">
+                                {% endif %}
+                                <h2 class="text-center m-2">{{ object.first_name }} {{ object.last_name }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pad-info rounded-3 border border-1">
+                        <div>
+                            <h3>Informacion</h3>
+                            <h5>correo</h5><span>{{ object.email }}</span>
+                        </div>
+                        <div style="margin-top: 25px;">
+                            <h5>descripcion</h5>
+                            <p style="text-align: justify;">{{ object.description }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="pad-info rounded-3 border border-1">
-                    <div>
-                        <h3>Informacion</h3>
-                        <h5>correo</h5><span>carlos.amy375d@gmail.com</span>
-                    </div>
-                    <div style="margin-top: 25px;">
-                        <h5>descripcion</h5>
-                        <p style="text-align: justify;">Mi interes reseñar los restaurantes que visito para que mas
-                            personas tengan la oportunidad de visitarlos y disfrutar los de la misma manera.</p>
+                <div class="conten-review rounded-3 border border-1">
+                    <h3>reseñas</h3>
+                    <h1 class="display-6" style="color: #008cff;font-weight: bold;">{{ count_review }} reseñas</h1>
+                    <div class="review">
+                        {% for rview in reviews_res %}
+                            <div class="conten-ref-princi rounded-3 border border-1">
+                                <div id="Review1{{ rview.id }}" class="modal fade" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog modal-fullscreen">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn btn-primary buton" type="button"
+                                                        data-bs-dismiss="modal"
+                                                        aria-label="close">X
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {% if rview.photo_one %}
+                                                    <img class="img-fluid"
+                                                         src="{{ rview.photo_one.url }}">
+                                                {% else %}
+
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="Review2{{ rview.id }}" class="modal fade" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog modal-fullscreen">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn btn-primary buton" type="button"
+                                                        data-bs-dismiss="modal"
+                                                        aria-label="close">X
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {% if rview.photo_two %}
+                                                    <img class="img-fluid"
+                                                         src="{{ rview.photo_two.url }}">
+                                                {% else %}
+
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="Review3{{ rview.id }}" class="modal fade" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog modal-fullscreen">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button class="btn btn-primary buton" type="button"
+                                                        data-bs-dismiss="modal"
+                                                        aria-label="close">X
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {% if rview.photo_three %}
+                                                    <img class="img-fluid"
+                                                         src="{{ rview.photo_three.url }}">
+                                                {% else %}
+
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row" style="padding-top: 5px;padding-left: 4px;">
+                                    {% if rview.person.photo %}
+                                        <img
+                                                class="rounded-circle" src="{{ rview.person.photo.url }}" width="70px"
+                                                height="70px"
+                                                style="width: 55px;height: 55px;">
+                                    {% else %}
+                                        <img
+                                                class="rounded-circle"
+                                                src="{% static 'assets/img/LogoEG/reviestartgris.png' %}" width="70px"
+                                                height="70px"
+                                                style="width: 55px;height: 55px;">
+                                    {% endif %}
+                                    <div style="margin: 0;margin-left: 14px;">
+                                        <h5>{{ rview.person.first_name }} {{ rview.person.last_name }}<br></h5><span
+                                            style="font-size: 13px;">{{ rview.date }}</span>
+                                    </div>
+                                </div>
+                                {% if rview.photo_one %}
+
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                                         style="margin-top: 20px;margin-bottom: 10px;">
+                                        <div class="carousel-indicators">
+                                            {% if rview.photo_one %}
+
+                                                <button class="btn btn-primary active" type="button"
+                                                        data-bs-slide-to="0"
+                                                        aria-current="true" aria-label="Slide 1"
+                                                        data-bs-target="#carouselExampleIndicators"></button>
+                                             {% else %}
+                                            {% endif %}
+
+                                            {% if rview.photo_one %}
+
+                                                <button class="btn btn-primary" type="button" data-bs-slide-to="1"
+                                                        aria-label="Slide 2"
+                                                        data-bs-target="#carouselExampleIndicators"></button>
+                                            {% else %}
+                                            {% endif %}
+
+                                            {% if rview.photo_one %}
+
+                                                <button class="btn btn-primary" type="button" data-bs-slide-to="2"
+                                                        aria-label="Slide 3"
+                                                        data-bs-target="#carouselExampleIndicators"></button>
+                                            {% else %}
+                                            {% endif %}
+
+                                        </div>
+                                        <div class="carousel-inner rounded-3">
+                                            <div class="carousel-item active rounded-3"
+                                                 style="height:250px;"
+                                                 data-bs-toggle="modal"
+                                                 data-bs-target="#Review1{{ rview.id }}">
+                                                {% if rview.photo_one %}
+                                                    <img class="img-fluid d-block w-100 image rounded-3"
+                                                         src="{{ rview.photo_one.url }}">
+                                                {% else %}
+
+                                                {% endif %}
+                                            </div>
+                                            {% if rview.photo_two %}
+
+                                                <div class="carousel-item image rounded-3"
+                                                     style="height:250px;"
+                                                     data-bs-toggle="modal"
+                                                     data-bs-target="#Review2{{ rview.id }}">
+                                                    {% if rview.photo_two %}
+                                                        <img class="img-fluid d-block w-100 image rounded-3"
+                                                             src="{{ rview.photo_two.url }}">
+                                                    {% else %}
+
+                                                    {% endif %}
+                                                </div>
+                                            {% endif %}
+                                            {% if rview.photo_three %}
+
+                                                <div class="carousel-item image rounded-3"
+                                                     style="height:250px;"
+                                                     data-bs-toggle="modal"
+                                                     data-bs-target="#Review3{{ rview.id }}">
+                                                    {% if rview.photo_three %}
+                                                        <img class="img-fluid d-block w-100 image rounded-3"
+                                                             src="{{ rview.photo_three.url }}">
+                                                    {% else %}
+
+                                                    {% endif %}
+                                                </div>
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class="conten-star">
+                                    {% if rview.score >= 1 %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="550" data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% else %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="550" data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% endif %}
+                                    {% if rview.score >= 2 %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="600"
+                                             data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% else %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="600" data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% endif %}
+                                    {% if rview.score >= 3 %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="650"
+                                             data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% else %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="650" data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% endif %}
+                                    {% if rview.score >= 4 %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="700"
+                                             data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% else %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="700" data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% endif %}
+                                    {% if rview.score >= 5 %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="750"
+                                             data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% else %}
+                                        <img data-aos="zoom-out" data-aos-duration="450"
+                                             data-aos-delay="750" data-aos-once="true"
+                                             class="image_star_card"
+                                             src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                             style="padding: 0px;margin: 3px;">
+                                    {% endif %}
+
+                                </div>
+                                <div style="padding-left: 10px;padding-right: 5px;">
+                                    <h4>{{ rview.title }}</h4>
+                                    <p style="font-size: 23px;">{{ rview.description }}</p>
+                                </div>
+                                <a class="text-decoration-none" href="#"></a><a class="text-decoration-none" href="#">
+                                <div class="d-flex flex-row conten-ref rounded-3 border border-1">
+
+                                    <div style="margin-bottom: 0px;margin-left: 30px;">
+                                        <h3 style="font-size: 80%;">{{ rview.place.name }}</h3>
+
+                                        <div class="conten-star-ref">
+
+                                            {% if rview.place.score >= 1 %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="550" data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% else %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="550" data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% endif %}
+                                            {% if rview.place.score >= 2 %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="600"
+                                                     data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% else %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="600" data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% endif %}
+                                            {% if rview.place.score >= 3 %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="650"
+                                                     data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% else %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="650" data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% endif %}
+                                            {% if rview.place.score >= 4 %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="700"
+                                                     data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% else %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="700" data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% endif %}
+                                            {% if rview.place.score >= 5 %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="750"
+                                                     data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/Stars/Revie - starts -xs.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% else %}
+                                                <img data-aos="zoom-out" data-aos-duration="450"
+                                                     data-aos-delay="750" data-aos-once="true"
+                                                     class="image_star_card"
+                                                     src="{% static 'assets/img/LogoEG/reviestartgris.png' %}"
+                                                     style="padding: 0px;margin: 3px;">
+                                            {% endif %}
+                                        </div>
+                                        <span>{{ rview.place.count_reviews }} reseñas</span>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                        {% endfor %}
+
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+                                <li class="page-item active rounded-3" aria-current="page"><a class="page-link border-0"
+                                                                                              href="#" target="_parent"
+                                                                                              style="background: var(--bs-blue);">1</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><span class="page-link">Siguiente</span></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
-            <div class="conten-review rounded-3 border border-1">
-                <h3>reseñas</h3>
-                <h1 class="display-6" style="color: #008cff;font-weight: bold;">50 reseñas</h1>
-                <div class="review">
-                    <div class="conten-ref-princi rounded-3 border border-1">
-                        <div id="Review1" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
-                             aria-hidden="true">
-                            <div class="modal-dialog modal-fullscreen">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
-                                                aria-label="close">X
-                                        </button>
-                                    </div>
-                                    <div class="modal-body"><img class="img-fluid"
-                                                                 src="assets/img/Restaurant/reserva-tu-cena-romantica.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="Review2" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
-                             aria-hidden="true">
-                            <div class="modal-dialog modal-fullscreen">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
-                                                aria-label="close">X
-                                        </button>
-                                    </div>
-                                    <div class="modal-body"><img class="img-fluid"
-                                                                 src="assets/img/Restaurant/cofradia-campestre-2_10_109620.jpeg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="Review3" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
-                             aria-hidden="true">
-                            <div class="modal-dialog modal-fullscreen">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
-                                                aria-label="close">X
-                                        </button>
-                                    </div>
-                                    <div class="modal-body"><img class="img-fluid"
-                                                                 src="assets/img/Restaurant/la-cofradia-mediterranea.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-row" style="padding-top: 5px;padding-left: 4px;"><img
-                                class="rounded-circle" src="assets/img/profile/profile2.jpg" width="70px" height="70px"
-                                style="width: 55px;height: 55px;">
-                            <div style="margin: 0px;margin-top: 0px;margin-right: 0px;margin-left: 14px;">
-                                <h5>CARLOS AMAYA<br></h5><span style="font-size: 13px;">12 de enero</span>
-                            </div>
-                        </div>
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
-                             style="margin-top: 20px;margin-bottom: 10px;">
-                            <div class="carousel-indicators">
-                                <button class="btn btn-primary active" type="button" data-bs-slide-to="0"
-                                        aria-current="true" aria-label="Slide 1"
-                                        data-bs-target="#carouselExampleIndicators"></button>
-                                <button class="btn btn-primary" type="button" data-bs-slide-to="1" aria-label="Slide 2"
-                                        data-bs-target="#carouselExampleIndicators"></button>
-                                <button class="btn btn-primary" type="button" data-bs-slide-to="2" aria-label="Slide 3"
-                                        data-bs-target="#carouselExampleIndicators"></button>
-                            </div>
-                            <div class="carousel-inner rounded-3">
-                                <div class="carousel-item active rounded-3" style="height:250px;" data-bs-toggle="modal"
-                                     data-bs-target="#Review1"><img class="img-fluid d-block w-100 image rounded-3"
-                                                                    src="assets/img/Restaurant/reserva-tu-cena-romantica.jpg">
-                                </div>
-                                <div class="carousel-item image rounded-3" style="height:250px;" data-bs-toggle="modal"
-                                     data-bs-target="#Review2"><img
-                                        class="img-fluid d-block w-100 image image rounded-3"
-                                        src="assets/img/Restaurant/cofradia-campestre-2_10_109620.jpeg"></div>
-                                <div class="carousel-item image rounded-3" style="height:250px;" data-bs-toggle="modal"
-                                     data-bs-target="#Review3"><img
-                                        class="img-fluid d-block w-100 image image rounded-3"
-                                        src="assets/img/Restaurant/la-cofradia-mediterranea.jpg"></div>
-                            </div>
-                        </div>
-                        <div class="conten-star"><img data-aos="zoom-out" data-aos-duration="450" data-aos-delay="550"
-                                                      data-aos-once="true" class="image_star_card"
-                                                      src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                      style="padding: 0px;margin: 3px;"><img data-aos="zoom-out"
-                                                                                             data-aos-duration="450"
-                                                                                             data-aos-delay="600"
-                                                                                             data-aos-once="true"
-                                                                                             class="image_star_card"
-                                                                                             src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                                                             style="padding: 0px;margin: 3px;"><img
-                                data-aos="zoom-out" data-aos-duration="450" data-aos-delay="650" data-aos-once="true"
-                                class="image_star_card" src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                style="padding: 0px;margin: 3px;"><img data-aos="zoom-out" data-aos-duration="450"
-                                                                       data-aos-delay="700" data-aos-once="true"
-                                                                       class="image_star_card"
-                                                                       src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                                                       style="padding: 0px;margin: 3px;"><img
-                                data-aos="zoom-out" data-aos-duration="450" data-aos-delay="750" data-aos-once="true"
-                                class="image_star_card" src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                style="padding: 0px;margin: 3px;"></div>
-                        <div style="padding-left: 10px;padding-right: 5px;">
-                            <h4>comida deliciosa</h4>
-                            <p style="font-size: 23px;">La comida muy rica&nbsp; y un lugar muy amigable con sus
-                                invitados&nbsp;</p>
-                        </div>
-                        <a class="text-decoration-none" href="#"></a><a class="text-decoration-none" href="#">
-                        <div class="d-flex flex-row conten-ref rounded-3 border border-1"><img
-                                class="photo-ref rounded-3"
-                                src="assets/img/Restaurant/igor-rand-wfM1Fi-kMaY-unsplash.jpg">
-                            <div style="margin-bottom: 0px;margin-left: 30px;">
-                                <h3 style="font-size: 80%;">la perrada de danilo</h3>
-                                <div class="conten-star-ref"><img data-aos="zoom-out" data-aos-duration="450"
-                                                                  data-aos-delay="550" data-aos-once="true"
-                                                                  class="image_star_card"
-                                                                  src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                                  style="padding: 0px;margin: 3px;"><img
-                                        data-aos="zoom-out" data-aos-duration="450" data-aos-delay="600"
-                                        data-aos-once="true" class="image_star_card"
-                                        src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                        style="padding: 0px;margin: 3px;"><img data-aos="zoom-out"
-                                                                               data-aos-duration="450"
-                                                                               data-aos-delay="650" data-aos-once="true"
-                                                                               class="image_star_card"
-                                                                               src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                                               style="padding: 0px;margin: 3px;"><img
-                                        data-aos="zoom-out" data-aos-duration="450" data-aos-delay="700"
-                                        data-aos-once="true" class="image_star_card"
-                                        src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                        style="padding: 0px;margin: 3px;"><img data-aos="zoom-out"
-                                                                               data-aos-duration="450"
-                                                                               data-aos-delay="750" data-aos-once="true"
-                                                                               class="image_star_card"
-                                                                               src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                                                               style="padding: 0px;margin: 3px;"></div>
-                                <span>55 reseñas</span>
-                            </div>
-                        </div>
-                    </a>
-                    </div>
-                    <div class="conten-ref-princi rounded-3 border border-1">
-                        <div class="d-flex flex-row" style="padding-top: 5px;padding-left: 4px;"><img
-                                class="rounded-circle" src="assets/img/profile/profile2.jpg" width="70px" height="70px"
-                                style="width: 55px;height: 55px;">
-                            <div style="margin: 0px;margin-top: 0px;margin-right: 0px;margin-left: 14px;">
-                                <h5>CARLOS AMAYA<br></h5><span style="font-size: 13px;">12 de enero</span>
-                            </div>
-                        </div>
-                        <div id="carouselExampleIndicators-1" class="carousel slide" data-bs-ride="carousel"
-                             style="margin-top: 20px;margin-bottom: 10px;">
-                            <div class="carousel-indicators">
-                                <button class="btn btn-primary active" type="button" data-bs-slide-to="0"
-                                        aria-current="true" aria-label="Slide 1"
-                                        data-bs-target="#carouselExampleIndicators"></button>
-                                <button class="btn btn-primary" type="button" data-bs-slide-to="1" aria-label="Slide 2"
-                                        data-bs-target="#carouselExampleIndicators"></button>
-                                <button class="btn btn-primary" type="button" data-bs-slide-to="2" aria-label="Slide 3"
-                                        data-bs-target="#carouselExampleIndicators"></button>
-                            </div>
-                        </div>
-                        <div class="conten-star"><img data-aos="zoom-out" data-aos-duration="450" data-aos-delay="550"
-                                                      data-aos-once="true" class="image_star_card"
-                                                      src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                      style="padding: 0px;margin: 3px;"><img data-aos="zoom-out"
-                                                                                             data-aos-duration="450"
-                                                                                             data-aos-delay="600"
-                                                                                             data-aos-once="true"
-                                                                                             class="image_star_card"
-                                                                                             src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                                                             style="padding: 0px;margin: 3px;"><img
-                                data-aos="zoom-out" data-aos-duration="450" data-aos-delay="650" data-aos-once="true"
-                                class="image_star_card" src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                style="padding: 0px;margin: 3px;"><img data-aos="zoom-out" data-aos-duration="450"
-                                                                       data-aos-delay="700" data-aos-once="true"
-                                                                       class="image_star_card"
-                                                                       src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                                                       style="padding: 0px;margin: 3px;"><img
-                                data-aos="zoom-out" data-aos-duration="450" data-aos-delay="750" data-aos-once="true"
-                                class="image_star_card" src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                style="padding: 0px;margin: 3px;"></div>
-                        <div style="padding-left: 10px;padding-right: 5px;">
-                            <h4>comida deliciosa</h4>
-                            <p style="font-size: 23px;">La comida muy rica&nbsp; y un lugar muy amigable con sus
-                                invitados&nbsp;</p>
-                        </div>
-                        <a class="text-decoration-none" href="#">
-                            <div class="d-flex flex-row conten-ref rounded-3 border border-1"><img
-                                    class="photo-ref rounded-3"
-                                    src="assets/img/Restaurant/igor-rand-wfM1Fi-kMaY-unsplash.jpg">
-                                <div style="margin-bottom: 0px;margin-left: 30px;">
-                                    <h3 style="font-size: 80%;">la perrada de danilo</h3>
-                                    <div class="conten-star-ref"><img data-aos="zoom-out" data-aos-duration="450"
-                                                                      data-aos-delay="550" data-aos-once="true"
-                                                                      class="image_star_card"
-                                                                      src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                                      style="padding: 0px;margin: 3px;"><img
-                                            data-aos="zoom-out" data-aos-duration="450" data-aos-delay="600"
-                                            data-aos-once="true" class="image_star_card"
-                                            src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                            style="padding: 0px;margin: 3px;"><img data-aos="zoom-out"
-                                                                                   data-aos-duration="450"
-                                                                                   data-aos-delay="650"
-                                                                                   data-aos-once="true"
-                                                                                   class="image_star_card"
-                                                                                   src="assets/img/Stars/Revie%20-%20starts%20-xs.png"
-                                                                                   style="padding: 0px;margin: 3px;"><img
-                                            data-aos="zoom-out" data-aos-duration="450" data-aos-delay="700"
-                                            data-aos-once="true" class="image_star_card"
-                                            src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                            style="padding: 0px;margin: 3px;"><img data-aos="zoom-out"
-                                                                                   data-aos-duration="450"
-                                                                                   data-aos-delay="750"
-                                                                                   data-aos-once="true"
-                                                                                   class="image_star_card"
-                                                                                   src="assets/img/Stars/Revie%20-%20starts%20none%20-xs.png"
-                                                                                   style="padding: 0px;margin: 3px;">
-                                    </div>
-                                    <span>55 reseñas</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><span class="page-link">Anterior</span></li>
-                            <li class="page-item active rounded-3" aria-current="page"><a class="page-link border-0"
-                                                                                          href="#" target="_parent"
-                                                                                          style="background: var(--bs-blue);">1</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><span class="page-link">Siguiente</span></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        {% endif %}
     </section>
 {% endblock body %}

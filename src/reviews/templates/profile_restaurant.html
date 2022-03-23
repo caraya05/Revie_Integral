@@ -222,6 +222,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
+
                                                 <div class="col-xl-10 col-sm-12">
                                                     <div class="text-center text-primary conten-rev mb-4">
                                                         <h5 class="h1-revs">Comida</h5>
@@ -295,7 +296,9 @@
                                 </div>
                             </div>
                             <h3>reseñas</h3>
-                            <h1 class="display-6" style="color: #008cff;font-weight: bold;">{{ restaurant.count_reviews }} reseñas ({{ restaurant.score }})</h1>
+                            <h1 class="display-6"
+                                style="color: #008cff;font-weight: bold;">{{ restaurant.count_reviews }} reseñas
+                                ({{ restaurant.score }})</h1>
                             <div class="d-grid justify-items-end mt-4 mb-4">
                                 <div class="fs-5 fw-light text-end conten-rev">
                                     <h6 class="h1-rev">Comida</h6>
@@ -423,7 +426,7 @@
                                 <div class="text-end conten-rev">
                                     <h4 class="h1-rev">ambiente</h4>
                                     <div class="conten-star-ref">
-                                         {% if restaurant.score_environment >= 1 %}
+                                        {% if restaurant.score_environment >= 1 %}
                                             <img class="image_medal_about"
                                                  src="{% static 'assets/img/Stars/Revie - starts verde -xs.png' %}">
                                         {% else %}
@@ -462,16 +465,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary buton ms-2 mb-2" data-bs-toggle="modal"
+                            <a class="btn btn-primary buton ms-2 mb-2"  href="{% url 'reviews:review' %}"
                                     data-bss-tooltip=""
-                                    type="button" data-bs-target="#review-rese" title="Agregar reseña"><i
+                                    type="button"  title="Agregar reseña"><i
                                     class="fas fa-pencil-alt me-3"></i><span data-bs-toggle="tooltip"
-                                                                             data-bss-tooltip="">Reseñar</span>
-                            </button>
+                                                                             data-bss-tooltip=""
+
+                            >Reseñar</span>
+                            </a>
                         </div>
                         <div class="review">
                             {% for rview in reviews_res %}
-
                                 <div class="conten-ref-princi rounded-3 border border-1">
 
                                     <div id="Review1{{ rview.id }}" class="modal fade" tabindex="-1"
@@ -590,17 +594,19 @@
 
                                                     {% endif %}
                                                 </div>
-                                                <div class="carousel-item image rounded-3"
-                                                     style="height:250px;"
-                                                     data-bs-toggle="modal"
-                                                     data-bs-target="#Review2{{ rview.id }}">
-                                                    {% if rview.photo_two %}
-                                                        <img class="img-fluid d-block w-100 image rounded-3"
-                                                             src="{{ rview.photo_two.url }}">
-                                                    {% else %}
+                                                {% if rview.photo_two %}
+                                                    <div class="carousel-item image rounded-3"
+                                                         style="height:250px;"
+                                                         data-bs-toggle="modal"
+                                                         data-bs-target="#Review2{{ rview.id }}">
+                                                        {% if rview.photo_two %}
+                                                            <img class="img-fluid d-block w-100 image rounded-3"
+                                                                 src="{{ rview.photo_two.url }}">
+                                                        {% else %}
 
-                                                    {% endif %}
-                                                </div>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endif %}
                                                 <div class="carousel-item image rounded-3"
                                                      style="height:250px;"
                                                      data-bs-toggle="modal"
@@ -688,11 +694,15 @@
                                                  style="padding: 0px;margin: 3px;">
                                         {% endif %}
                                     </div>
-                                    <div style="padding-left: 10px;padding-right: 5px;">
-                                        <h4>{{ rview.title }}</h4>
-                                        <p style="font-size: 23px;">{{ rview.description }}</p>
-                                    </div>
-                                    <a class="text-decoration-none" href="#"></a>
+                                    <a class="text-decoration-none"
+                                       href="{% url 'reviews:reviewer' rview.person.pk %}">
+
+                                        <div style="padding-left: 10px;padding-right: 5px;">
+                                            <h4>{{ rview.title }}</h4>
+                                            <p style="font-size: 23px;">{{ rview.description }}</p>
+                                        </div>
+                                        <a class="text-decoration-none" href="#"></a>
+                                    </a>
                                 </div>
                             {% endfor %}
 
@@ -717,5 +727,4 @@
         </section>
 
     {% endif %}
-
 {% endblock body %}

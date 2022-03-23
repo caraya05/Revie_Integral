@@ -63,8 +63,9 @@
     </div><!-- End: windows_emer -->
     <!-- Start: Navigation with Button -->
     <nav class="navbar navbar-light navbar-expand-xl navigation-clean-button fixed-top bg-light py-1 border-0">
-        <div class="container"><a class="navbar-brand conten_nav" href="{% url 'index' %}"><img class="img-fluid logo_nav"
-                                                                                                src="{% static 'assets/img/LogoCLSB/logo-nav.png' %}"></a>
+        <div class="container"><a class="navbar-brand conten_nav" href="{% url 'index' %}"><img
+                class="img-fluid logo_nav"
+                src="{% static 'assets/img/LogoCLSB/logo-nav.png' %}"></a>
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span
                     class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
@@ -88,7 +89,8 @@
                             </svg>
                         </a>
                             <div class="dropdown-menu"><a class="dropdown-item span_nav" href="#"
-                                                          style="font-size: 80%;">PERFIL</a><a
+                                                          style="font-size: 80%;"><a class="dropdown-item span_nav"
+                                       href="{% url 'reviews:reviewer' pk=user.pk %}" style="font-size: 80%;">PERFIL</a></a ><a
                                     class="dropdown-item span_nav" href="{% url 'logout' %}" style="font-size: 80%;">CERRAR
                                 SESION</a>
                             </div>
@@ -97,10 +99,10 @@
                 </ul>
                 {% if not user.is_authenticated %}
                     <a class="navbar-text actions"> <a class="stretched-link buton-outline login"
-                                                          href="{% url 'login' %}"
-                                                          role="button"><span class="link">Iniciar sesion</span></a>
-                        <a class="btn btn-primary buton" type="button"
-                           href="{% url 'reviews:register_reviewer' %}">
+                                                       href="{% url 'login' %}"
+                                                       role="button"><span class="link">Iniciar sesion</span></a>
+                    <a class="btn btn-primary buton" type="button"
+                       href="{% url 'reviews:register_reviewer' %}">
                         <span class="link">Registrarse</span></a>
                 {% endif %}
             </div>

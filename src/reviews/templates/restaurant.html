@@ -6,32 +6,7 @@
 {% endblock %}
 {% block body %}
     <section class="pt-5 mt-5">
-        <div class="filter-principal border border-1 rounded-3">
-            <form class="d-flex filter-conten" method="get" target="_self" enctype="application/x-www-form-urlencoded">
-                <div class="d-flex flex-row conten-search"><input
-                        class="form-control form-control-sm form-control me-2 filter-search w-100" type="search"
-                        aria-label="Search" placeholder="La cofradia ..."></div>
-                <div class="text-end conten-filter"><select class="form-select form-select-sm me-2 filter-select">
-                    <optgroup label="Categoria">
-                        <option value="1">Bar</option>
-                        <option value="2">Mariscos</option>
-                        <option value="3" selected="">Internacional</option>
-                        <option value="4">Callejera</option>
-                        <option value="5">Mexicana</option>
-                    </optgroup>
-                </select><select class="form-select form-select-sm me-2 filter-select">
-                    <optgroup label="Puntuacion">
-                        <option value="12">1</option>
-                        <option value="22">2</option>
-                        <option value="32">3</option>
-                        <option value="42">4</option>
-                        <option value="52" selected="">5</option>
-                    </optgroup>
-                </select>
-                    <button class="btn btn-primary buton" type="submit">Buscar</button>
-                </div>
-            </form>
-        </div>
+
         {% for restaurant in object_list %}
             <article class="d-flex flex-column" style="border-color: #86c1ff;">
                 <!-- Start: Card-figo-class-medal -->

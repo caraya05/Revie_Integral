@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block postcss %}
+    <link rel="stylesheet" href="{% static 'assets/css/profile_restaurant.compiled.css' %}">
+{% endblock %}
+{% block body %}
+
+    <section class="mt-5 pt-5 ">
+        <article class="conten_info_register d-grid align-items-center justify-items-center">
+            <form id="form_regis" class="" action="{{ request.get_full_path }}" method="POST">
+                {% csrf_token %}
+                {% if form %}
+                    <div class="col-xl-12 col-sm-12 mb-5">
+                        <div class="col-xl-10 col-sm-12">
+                            <div class="text-center text-primary conten-rev ">
+                                <h5 class="h1-revs me-5">{{ form.score_food.label }}</h5>
+                                <div class="d-grid col-12 align-items-center {{ form.prefix }}">
+                                    {{ form.score_food }}
+                                </div>
+                            </div>
+                            <div class="text-center text-primary conten-rev ">
+                                <h5 class="h1-revs me-5">{{ form.score_quality_price.label }}</h5>
+                                <div class="d-grid col-12  align-items-center {{ form.prefix }}">
+                                    {{ form.score_quality_price }}
+                                </div>
+                            </div>
+                            <div class="text-center text-primary conten-rev ">
+                                <h5 class="h1-revs me-5">{{ form.score_service.label }}</h5>
+                                <div class="d-grid col-12  align-items-center {{ form.prefix }}">
+                                    {{ form.score_service }}
+                                </div>
+                            </div>
+                            <div class="text-center col-12 text-primary conten-rev ">
+                                <h5 class="h1-revs me-5">  {{ form.score_environment.label }}</h5>
+                                <div class="d-grid col-12  align-items-center {{ form.prefix }}">
+                                    {{ form.score_environment }}
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group input-group-sm mb-3 has-validation col-12"><span
+                                class="input-group-text {{ form.prefix }}"
+                                aria-label="Username">{{ form.title.label }}</span>
+                            {{ form.title }}
+                        </div>
+                        <div id="descrip-1" class="input-group input-group-sm mb-3">
+
+                            {{ form.description }}
+                            <span
+                                    class="input-group-text" aria-label="Username"
+                                    aria-describedby="basic-addon1">{{ form.description.label }}</span>
+                        </div>
+                        <div class="input-group input-group-sm mb-3"><span id="basic-addon-13"
+                                                                           class="input-group-text"
+                                                                           aria-label="Username"
+                                                                           aria-describedby="basic-addon1">Foto 1</span><input
+                                class="form-control" type="file" multiple=""
+                                accept="image/jpg, image/jpeg, image/png"></div>
+                        <div class="input-group input-group-sm mb-3"><input class="form-control"
+                                                                            type="file"
+                                                                            multiple=""
+                                                                            accept="image/jpg, image/jpeg, image/png"><span
+                                id="basic-addon-13" class="input-group-text"
+                                aria-label="Username"
+                                aria-describedby="basic-addon1">Foto 2</span></div>
+                        <div class="input-group input-group-sm mb-3"><span id="basic-addon-13"
+                                                                           class="input-group-text"
+                                                                           aria-label="Username"
+                                                                           aria-describedby="basic-addon1">Foto 3</span><input
+                                class="form-control" type="file" multiple=""
+                                accept="image/jpg, image/jpeg, image/png"></div>
+                        <button class="btn btn-primary buton" type="submit">Enviar</button>
+
+                    </div>
+                {% endif %}
+            </form>
+        </article>
+    </section>
+{% endblock body %}
+

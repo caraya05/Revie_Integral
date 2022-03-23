@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block postcss %}
+    <link rel="stylesheet" href="{% static 'assets/css/profile_reviewer.compiled.css' %}">
+{% endblock %}
+{% block body %}
+
+    <section class="mt-5 pt-5 ">
+        <article class="conten_info_register d-grid align-items-center justify-items-center">
+            <form id="form_regis" class="" action="{{ request.get_full_path }}" method="POST">
+                {% csrf_token %}
+                {% if form %}
+                    <div id="register_reviewer" class="all_info">
+                        <div id="basica" class="info_basic">
+                            <h3 class="text-center heading_regis">Informacion basica</h3>
+                            <div class="compar">
+                                <div class="input-group input-group-sm mb-3 {{ form.prefix }}">
+                                    {{ form.first_name }}
+                                    <span
+                                            id="basic-addon1" class="input-group-text " aria-label="Username"
+                                            aria-describedby="basic-addon1">{{ form.first_name.label }}</span>
+                                    <div class="invalid-tooltip">
+                                        Ingrese un nombre valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
+                                </div>
+                                <div class="input-group input-group-sm mb-3" {{ form.prefix }}>
+                                    {{ form.last_name }}
+                                    <span id="basic-addon-1"
+                                          class="input-group-text"
+                                          aria-label="Username"
+                                          aria-describedby="basic-addon1">{{ form.last_name.label }}</span>
+                                    <div class="invalid-tooltip">
+                                        Ingrese un apellido valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group input-group-sm mb-3 {{ form.prefix }}"><span id="basic-addon-2"
+                                                                                                 class="input-group-text"
+                                                                                                 aria-label="Username"
+                                                                                                 aria-describedby="basic-addon1">{{ form.email.label }}</span>
+                                {{ form.email }}
+                                <div class="invalid-tooltip">
+                                    Ingrese un correo valido!
+                                </div>
+                                <div class="valid-tooltip">
+                                    Excelente!
+                                </div>
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3 {{ form.prefix }}">
+                                {{ form.phone }}
+                                <span id="basic-addon-6" class="input-group-text"
+                                      aria-label="Username"
+                                      aria-describedby="basic-addon1">{{ form.phone.label }}</span>
+                                <div class="invalid-tooltip">
+                                    Ingrese un telefono valido!
+                                </div>
+                                <div class="valid-tooltip">
+                                    Excelente!
+                                </div>
+                            </div>
+                            <div class="compar">
+                                <div class="input-group input-group-sm mb-3 {{ form.prefix }}">
+                                    <span id="basic-addon-5"
+                                          class="input-group-text"
+                                          aria-label="Username"
+                                          aria-describedby="basic-addon1">{{ form.age.label }}</span>
+                                    {{ form.age }}
+                                    <div class="invalid-tooltip">
+                                        Ingrese una valida valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
+                                </div>
+                                <div class="input-group input-group-sm mb-3 {{ form.prefix }}">
+                                    <span id="basic-addon-7"
+                                          class="input-group-text"
+                                          aria-label="Username"
+                                          aria-describedby="basic-addon1">{{ form.gender.label }}</span>
+                                    {{ form.gender }}
+                                    <div class="invalid-tooltip">
+                                        Seleccione un sexo valido!
+                                    </div>
+                                    <div class="valid-tooltip">
+                                        Excelente!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="complementaria" class="info_comple">
+                            <h3 class="text-center heading_regis">Informacion Complementaria</h3>
+                            <div class="input-group input-group-sm mb-3"><span id="basic-addon-8"
+                                                                               class="input-group-text"
+                                                                               aria-label="Username"
+                                                                               aria-describedby="basic-addon1">{{ form.photo.label }}</span>
+                                {{ form.photo }}
+                            </div>
+                            <div id="descrip" class="input-group input-group-sm mb-3{{ form.prefix }}">
+                                {{ form.description }}
+                                <span
+                                        class="input-group-text" aria-label="Username"
+                                        aria-describedby="basic-addon1">{{ form.description.label }}</span></div>
+                            <div class="conten_buton" style="text-align: right;">
+                                <button class="btn btn-primary buton" id="envio" type="submit"
+                                        style="text-align: right;">
+                                    Registrar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </form>
+        </article>
+    </section>
+{% endblock body %}
+

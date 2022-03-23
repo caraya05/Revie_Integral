@@ -4,6 +4,7 @@ from typing import Optional
 
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
+from django.utils.timezone import now
 from django.utils.translation import gettext_lazy as _
 from loducode_utils.models.audit import Audit
 
@@ -44,7 +45,7 @@ class Review(Audit):
     title: str = models.CharField(verbose_name=_('Title'), max_length=555)
     """Title of the Review."""
 
-    date: datetime = models.DateField(verbose_name=_('date'))
+    date: datetime = models.DateField(verbose_name=_('date'), default=now, editable=False)
     """Date on which the review was performed."""
     description: str = models.TextField(verbose_name=_('Description'))
     """description of the review."""

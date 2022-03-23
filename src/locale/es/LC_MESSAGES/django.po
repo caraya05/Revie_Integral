@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-21 16:00-0500\n"
+"POT-Creation-Date: 2022-03-23 00:30-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,10 +31,12 @@ msgid "Commons"
 msgstr "Comunes"
 
 #: commons/forms/login_form.py:10 reviews/forms/reviewer_fom.py:45
+#: reviews/forms/updatereviewer_fom.py:31
 msgid "Enter your email"
 msgstr ""
 
 #: commons/forms/login_form.py:11 reviews/forms/reviewer_fom.py:42
+#: reviews/forms/updatereviewer_fom.py:28
 msgid "Email"
 msgstr ""
 
@@ -90,19 +92,19 @@ msgstr ""
 msgid "Email validate, has been sent to the mail the new password."
 msgstr ""
 
-#: reviews/apps.py:7 reviews/models/review.py:71
+#: reviews/apps.py:7 reviews/models/review.py:89
 msgid "Reviews"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:13
+#: reviews/forms/reviewer_fom.py:13 reviews/forms/updatereviewer_fom.py:13
 msgid "M"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:14
+#: reviews/forms/reviewer_fom.py:14 reviews/forms/updatereviewer_fom.py:14
 msgid "T"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:15
+#: reviews/forms/reviewer_fom.py:15 reviews/forms/updatereviewer_fom.py:15
 msgid "F"
 msgstr ""
 
@@ -114,53 +116,58 @@ msgstr ""
 msgid "Enter the password again"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:34 reviews/models/restaurant.py:21
-#: users/models/person.py:32
+#: reviews/forms/reviewer_fom.py:34 reviews/forms/updatereviewer_fom.py:20
+#: reviews/models/restaurant.py:21 users/models/person.py:32
 msgid "Name"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:37
+#: reviews/forms/reviewer_fom.py:37 reviews/forms/updatereviewer_fom.py:23
 msgid "Enter your name"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:38 users/models/person.py:34
+#: reviews/forms/reviewer_fom.py:38 reviews/forms/updatereviewer_fom.py:24
+#: users/models/person.py:34
 msgid "Last Name"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:39
+#: reviews/forms/reviewer_fom.py:39 reviews/forms/updatereviewer_fom.py:25
 msgid "Enter your last name"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:49
+#: reviews/forms/reviewer_fom.py:49 reviews/forms/updatereviewer_fom.py:35
 msgid "Phone number"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:50
+#: reviews/forms/reviewer_fom.py:50 reviews/forms/updatereviewer_fom.py:36
 msgid "Enter your phone number"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:52 reviews/models/restaurant.py:31
-#: reviews/models/review.py:46 users/models/person.py:44
+#: reviews/forms/reviewer_fom.py:52 reviews/forms/updatereviewer_fom.py:38
+#: reviews/models/restaurant.py:31 reviews/models/review.py:49
+#: users/models/person.py:44
 msgid "Description"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:53
+#: reviews/forms/reviewer_fom.py:53 reviews/forms/updatereviewer_fom.py:39
 msgid "Enter your description"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:56 users/models/person.py:36
+#: reviews/forms/reviewer_fom.py:56 reviews/forms/updatereviewer_fom.py:42
+#: users/models/person.py:36
 msgid "Age"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:56
+#: reviews/forms/reviewer_fom.py:56 reviews/forms/updatereviewer_fom.py:42
 msgid "Enter your age"
 msgstr ""
 
-#: reviews/forms/reviewer_fom.py:61 users/models/person.py:38
+#: reviews/forms/reviewer_fom.py:61 reviews/forms/updatereviewer_fom.py:47
+#: users/models/person.py:38
 msgid "Gender"
 msgstr ""
 
 #: reviews/models/photo_restaurant.py:30 reviews/models/photo_review.py:30
+#: reviews/models/review.py:68
 msgid "Photo One"
 msgstr ""
 
@@ -196,51 +203,68 @@ msgstr ""
 msgid "Web Site"
 msgstr ""
 
-#: reviews/models/restaurant.py:33 reviews/models/top_restaurant.py:15
+#: reviews/models/restaurant.py:33
+msgid "Category"
+msgstr ""
+
+#: reviews/models/restaurant.py:35 reviews/models/review.py:51
+#: reviews/models/top_restaurant.py:15
 msgid "Score"
 msgstr ""
 
-#: reviews/models/restaurant.py:37
-msgid "Date Create"
-msgstr ""
-
-#: reviews/models/restaurant.py:39
-msgid "Status"
-msgstr ""
-
-#: reviews/models/restaurant.py:45 reviews/models/top_restaurant.py:12
-msgid "Restaurant"
-msgstr ""
-
-#: reviews/models/restaurant.py:46
-msgid "Restaurants"
-msgstr ""
-
-#: reviews/models/review.py:42
-msgid "Title"
-msgstr ""
-
-#: reviews/models/review.py:44
-msgid "date"
-msgstr ""
-
-#: reviews/models/review.py:48
+#: reviews/models/restaurant.py:37 reviews/models/review.py:54
 msgid "Score Service"
 msgstr ""
 
-#: reviews/models/review.py:51
+#: reviews/models/restaurant.py:39 reviews/models/review.py:57
 msgid "Score Food"
 msgstr ""
 
-#: reviews/models/review.py:55
+#: reviews/models/restaurant.py:41 reviews/models/review.py:61
 msgid "Score Environment"
 msgstr ""
 
-#: reviews/models/review.py:59
+#: reviews/models/restaurant.py:44 reviews/models/review.py:65
 msgid "Score Quality Price"
 msgstr ""
 
-#: reviews/models/review.py:70
+#: reviews/models/restaurant.py:47
+msgid "Date Create"
+msgstr ""
+
+#: reviews/models/restaurant.py:49
+msgid "Count Reviews"
+msgstr ""
+
+#: reviews/models/restaurant.py:52
+msgid "Status"
+msgstr ""
+
+#: reviews/models/restaurant.py:58 reviews/models/top_restaurant.py:12
+msgid "Restaurant"
+msgstr ""
+
+#: reviews/models/restaurant.py:59
+msgid "Restaurants"
+msgstr ""
+
+#: reviews/models/review.py:44
+msgid "Title"
+msgstr ""
+
+#: reviews/models/review.py:47
+msgid "date"
+msgstr ""
+
+#: reviews/models/review.py:71
+msgid "Photo Two"
+msgstr ""
+
+#: reviews/models/review.py:74
+msgid "Photo Three"
+msgstr ""
+
+#: reviews/models/review.py:88
 msgid "Review"
 msgstr ""
 
