@@ -8,7 +8,7 @@
 
     <section class="mt-5 pt-5 ">
         <article class="conten_info_register d-grid align-items-center justify-items-center">
-            <form id="form_regis" class="" action="{{ request.get_full_path }}" method="POST">
+            <form id="form_regis" class="" action="{{ request.get_full_path }}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 {% if form %}
                     <div class="col-xl-12 col-sm-12 mb-5">
@@ -55,22 +55,19 @@
                         <div class="input-group input-group-sm mb-3"><span id="basic-addon-13"
                                                                            class="input-group-text"
                                                                            aria-label="Username"
-                                                                           aria-describedby="basic-addon1">Foto 1</span><input
-                                class="form-control" type="file" multiple=""
-                                accept="image/jpg, image/jpeg, image/png"></div>
-                        <div class="input-group input-group-sm mb-3"><input class="form-control"
-                                                                            type="file"
-                                                                            multiple=""
-                                                                            accept="image/jpg, image/jpeg, image/png"><span
+                                                                           aria-describedby="basic-addon1">{{ form.photo_one.label }}</span>
+                            {{ form.photo_one }}
+                        </div>
+                        <div class="input-group input-group-sm mb-3">
+                            {{ form.photo_two }}<span
                                 id="basic-addon-13" class="input-group-text"
                                 aria-label="Username"
-                                aria-describedby="basic-addon1">Foto 2</span></div>
+                                aria-describedby="basic-addon1"> {{ form.photo_two.label }}</span></div>
                         <div class="input-group input-group-sm mb-3"><span id="basic-addon-13"
                                                                            class="input-group-text"
                                                                            aria-label="Username"
-                                                                           aria-describedby="basic-addon1">Foto 3</span><input
-                                class="form-control" type="file" multiple=""
-                                accept="image/jpg, image/jpeg, image/png"></div>
+                                                                           aria-describedby="basic-addon1"> {{ form.photo_three.label }}</span>{{ form.photo_three }}
+                        </div>
                         <button class="btn btn-primary buton" type="submit">Enviar</button>
 
                     </div>

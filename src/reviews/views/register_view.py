@@ -1,5 +1,6 @@
 import requests
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, UpdateView
@@ -7,7 +8,7 @@ from django.views.generic import CreateView, UpdateView
 from reviews.forms.review_form import ReviewForm
 from reviews.forms.reviewer_fom import ReviewerForm
 from reviews.forms.updatereviewer_fom import UpdateReviewerForm
-from reviews.models import Review
+from reviews.models import Review, Restaurant
 from users.models import Person
 
 
@@ -31,17 +32,22 @@ class RegisterReviewerView(CreateView):
         return context
 
 
-class RegisterReviewView(CreateView):
+class RegisterReviewView(LoginRequiredMixin, CreateView):
+    login_url = reverse_lazy('login')
     model = Review
     form_class = ReviewForm
     template_name = "review.html"
     success_url = reverse_lazy('index')
 
     def form_valid(self, form):
-        instance = form.save(commit=False)  # pylint: disable=W0707 W0201
-        instance.person = self.request.user
+        self.object = form.save(commit=False)  # pylint: disable=W0707 W0201
+        self.object.person = self.request.user
+        place = self.request.GET.get('restaurant')
+        self.object.place = Restaurant.objects.filter(id=place).first()
+        self.object.save()
         print('aca si esta', self.request.user.id)
-        return HttpResponseRedirect(reverse_lazy('index'))
+        return HttpResponseRedirect(
+            reverse('reviews:restaurant', args=[Restaurant.objects.filter(id=place).first().id]))
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -13,8 +13,8 @@ class UpdateReviewerForm(forms.ModelForm):
         ('T', _('T')),
         ('F', _('F')),
     ]
-    # photo = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
-    #                                                        'accept': 'image/jpg, image/jpeg, image/png'}))
+    photo = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
+                                                           'accept': 'image/jpg, image/jpeg, image/png'}))
 
     first_name = forms.CharField(label=_('Name'),
                                  widget=forms.TextInput(attrs={
@@ -54,7 +54,7 @@ class UpdateReviewerForm(forms.ModelForm):
             'age',
             'gender',
             'phone',
-            # 'photo',
+            'photo',
             'description',
             'email',
         ]

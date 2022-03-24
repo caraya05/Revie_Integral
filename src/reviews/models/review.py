@@ -45,7 +45,7 @@ class Review(Audit):
     title: str = models.CharField(verbose_name=_('Title'), max_length=555)
     """Title of the Review."""
 
-    date: datetime = models.DateField(verbose_name=_('date'), default=now, editable=False)
+    date: datetime = models.DateField(verbose_name=_('date'), default=now, editable=False   )
     """Date on which the review was performed."""
     description: str = models.TextField(verbose_name=_('Description'))
     """description of the review."""

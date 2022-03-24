@@ -14,8 +14,8 @@ class ReviewerForm(UserCreationForm):
         ('T', _('T')),
         ('F', _('F')),
     ]
-    # photo = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
-    #                                                        'accept': 'image/jpg, image/jpeg, image/png'}))
+    photo = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
+                                                           'accept': 'image/jpg, image/jpeg, image/png'}))
     password1 = forms.CharField(
         label=_("Password"),
         strip=False,
@@ -69,7 +69,7 @@ class ReviewerForm(UserCreationForm):
             'age',
             'gender',
             'phone',
-            # 'photo',
+            'photo',
             'description',
             'email',
             'password1',

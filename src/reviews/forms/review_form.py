@@ -7,12 +7,12 @@ from reviews.models import Review
 
 
 class ReviewForm(forms.ModelForm):
-    # photo_one = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
-    #                                                        'accept': 'image/jpg, image/jpeg, image/png'}))
-    # photo_two = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
-    #                                                        'accept': 'image/jpg, image/jpeg, image/png'}))
-    # photo_three = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
-    #                                                        'accept': 'image/jpg, image/jpeg, image/png'}))
+    photo_one = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
+                                                               'accept': 'image/jpg, image/jpeg, image/png'}))
+    photo_two = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
+                                                               'accept': 'image/jpg, image/jpeg, image/png'}))
+    photo_three = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control form-control-sm',
+                                                                 'accept': 'image/jpg, image/jpeg, image/png'}))
 
     title = forms.CharField(label=_('Title'),
                             widget=forms.TextInput(attrs={
@@ -41,7 +41,7 @@ class ReviewForm(forms.ModelForm):
             'score_food',
             'score_environment',
             'score_quality_price',
-            # 'photo_one',
-            # 'photo_two',
-            # 'photo_three',
+            'photo_one',
+            'photo_two',
+            'photo_three',
         ]
