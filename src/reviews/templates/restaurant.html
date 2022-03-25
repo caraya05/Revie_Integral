@@ -19,16 +19,22 @@
                                 <div class="modal-dialog modal-fullscreen">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                            <button class="btn btn-primary buton" type="button"
+                                                    data-bs-dismiss="modal"
                                                     aria-label="close">X
                                             </button>
                                         </div>
-                                        <div class="modal-body"><img class="img-fluid"
-                                                                     src="{{ photo.photo_one.url }}"></div>
+                                        <div class="modal-body">
+                                            {% if photo.photo_one %}
+
+                                                <img class="img-fluid"
+                                                     src="{{ photo.photo_one.url }}"></div>
+                                            {% endif %}
                                     </div>
                                 </div>
                             </div><!-- End: Modal-XL -->
                         {% endif %}
+
                         {% if forloop.counter == 2 %}
                             <!-- Start: Modal-L -->
                             <div id="ModalL" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -36,24 +42,34 @@
                                 <div class="modal-dialog modal-fullscreen">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                            <button class="btn btn-primary buton" type="button"
+                                                    data-bs-dismiss="modal"
                                                     aria-label="close">X
                                             </button>
                                         </div>
-                                        <div class="modal-body"><img class="img-fluid"
-                                                                     src="{{ photo.photo_one.url }}">
+                                        <div class="modal-body">
+                                            {% if photo.photo_one %}
+
+                                                <img class="img-fluid"
+                                                     src="{{ photo.photo_one.url }}">
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-dialog modal">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                            <button class="btn btn-primary buton" type="button"
+                                                    data-bs-dismiss="modal"
                                                     aria-label="close">X
                                             </button>
                                         </div>
-                                        <div class="modal-body"><img
-                                                src="{{ photo.photo_one.url }}">
+                                        <div class="modal-body">
+                                            {% if photo.photo_one %}
+
+                                                <img
+                                                        src="{{ photo.photo_one.url }}">
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -66,12 +82,17 @@
                                 <div class="modal-dialog modal-fullscreen">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                            <button class="btn btn-primary buton" type="button"
+                                                    data-bs-dismiss="modal"
                                                     aria-label="close">X
                                             </button>
                                         </div>
-                                        <div class="modal-body"><img class="img-fluid"
-                                                                     src="{{ photo.photo_one.url }}">
+                                        <div class="modal-body">
+                                            {% if photo.photo_one %}
+
+                                                <img class="img-fluid"
+                                                     src="{{ photo.photo_one.url }}">
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -84,12 +105,17 @@
                                 <div class="modal-dialog modal-fullscreen">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                            <button class="btn btn-primary buton" type="button"
+                                                    data-bs-dismiss="modal"
                                                     aria-label="close">X
                                             </button>
                                         </div>
-                                        <div class="modal-body"><img class="img-fluid"
-                                                                     src="{{ photo.photo_one.url }}">
+                                        <div class="modal-body">
+                                            {% if photo.photo_one %}
+
+                                                <img class="img-fluid"
+                                                     src="{{ photo.photo_one.url }}">
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -102,12 +128,17 @@
                                 <div class="modal-dialog modal-fullscreen">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                            <button class="btn btn-primary buton" type="button"
+                                                    data-bs-dismiss="modal"
                                                     aria-label="close">X
                                             </button>
                                         </div>
-                                        <div class="modal-body"><img class="img-fluid"
-                                                                     src="{{ photo.photo_one.url }}">
+                                        <div class="modal-body">
+                                            {% if photo.photo_one %}
+
+                                                <img class="img-fluid"
+                                                     src="{{ photo.photo_one.url }}">
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -117,8 +148,13 @@
                             <div class="conten_image_xl">
                             <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="50" data-aos-once="true"
                                  class="image_xl" data-bs-toggle="modal" data-bs-target="#ModalXL">
-                                <figure class="figure"><img class="figure-img rounded-1"
-                                                            src="{{ photo.photo_one.url }}"></figure>
+                                <figure class="figure">
+                                    {% if photo.photo_one %}
+
+                                        <img class="figure-img rounded-1"
+                                             src="{{ photo.photo_one.url }}">
+                                    {% endif %}
+                                </figure>
                             </div>
                         {% endif %}
                     {% if forloop.counter == 2 %}
@@ -126,8 +162,12 @@
                         <div class="align-items-center image_l" data-aos="zoom-in" data-aos-duration="500"
                              data-aos-delay="150" data-aos-once="true" data-bs-toggle="modal"
                              data-bs-target="#ModalL">
-                            <figure class="figure"><img class="figure-img rounded-1"
-                                                        src="{{ photo.photo_one.url }}">
+                            <figure class="figure">
+                                {% if photo.photo_one %}
+
+                                    <img class="figure-img rounded-1"
+                                         src="{{ photo.photo_one.url }}">
+                                {% endif %}
                             </figure>
                         </div>
                     {% endif %}
@@ -137,8 +177,12 @@
                         <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="450"
                              data-aos-once="true" class="image_s_d" data-bs-toggle="modal"
                              data-bs-target="#ModalS2">
-                            <figure class="figure"><img class="figure-img rounded-1"
-                                                        src="{{ photo.photo_one.url }}">
+                            <figure class="figure">
+                                {% if photo.photo_one %}
+
+                                    <img class="figure-img rounded-1"
+                                         src="{{ photo.photo_one.url }}">
+                                {% endif %}
                             </figure>
                         </div>
                     {% endif %}
@@ -146,8 +190,12 @@
                         <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="350"
                              data-aos-once="true" class="image_s_i" data-bs-toggle="modal"
                              data-bs-target="#ModalS1">
-                            <figure class="figure"><img class="figure-img rounded-1"
-                                                        src="{{ photo.photo_one.url }}">
+                            <figure class="figure">
+                                {% if photo.photo_one %}
+
+                                    <img class="figure-img rounded-1"
+                                         src="{{ photo.photo_one.url }}">
+                                {% endif %}
                             </figure>
                         </div>
                         </div>
@@ -156,15 +204,19 @@
                         <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="250"
                              data-aos-once="true" class="image_m" data-bs-toggle="modal"
                              data-bs-target="#ModalM">
-                            <figure class="figure"><img class="figure-img rounded-1"
-                                                        src="{{ photo.photo_one.url }}">
+                            <figure class="figure">
+                                {% if photo.photo_one %}
+
+                                    <img class="figure-img rounded-1"
+                                         src="{{ photo.photo_one.url }}">
+                                {% endif %}
                             </figure>
                         </div>
                         </div>
                         </div>
 
                         </div>
-                     <a class="text-decoration-none" href="{% url 'reviews:restaurant' restaurant.pk %}">
+                        <a class="text-decoration-none" href="{% url 'reviews:restaurant' restaurant.pk %}">
                             <div class="conten_info">
                                 <h4 data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
                                     data-aos-once="true"
@@ -181,31 +233,25 @@
                                                  style="padding: 0px;margin: 3px;">
                                         {% endfor %}
                                     {% endwith %}
-{#                                    {% if restaurant.score < '5' %}#}
-{#                                        <img data-aos="zoom-out"#}
-{#                                             data-aos-duration="450"#}
-{#                                             data-aos-delay="700"#}
-{#                                             data-aos-once="true"#}
-{#                                             class="image_star_card"#}
-{#                                             src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}"#}
-{#                                             style="padding: 0px;margin: 3px;">#}
-{#                                    {% endif %}#}
+                                    {#                                    {% if restaurant.score < '5' %}#}
+                                    {#                                        <img data-aos="zoom-out"#}
+                                    {#                                             data-aos-duration="450"#}
+                                    {#                                             data-aos-delay="700"#}
+                                    {#                                             data-aos-once="true"#}
+                                    {#                                             class="image_star_card"#}
+                                    {#                                             src="{% static 'assets/img/Stars/Revie - starts none -xs.png' %}"#}
+                                    {#                                             style="padding: 0px;margin: 3px;">#}
+                                    {#                                    {% endif %}#}
                                     <div data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
                                          data-aos-once="true"
                                          class="acount_state_div"><span id="acount_revie-1"
                                                                         class="text-decoration-none"
-                                                                        style="margin: 7px;">50 Reseñas</span>
-                                        {% if restaurant.status %}
-                                            <span id="state_OC-1" class="state_OC"
-                                                  style="margin: 7px;">Abierto</span>
-                                        {% else %}
-                                            <span id="state_OC-1" class="state_OC"
-                                                  style="margin: 7px;">Cerrado</span>
-                                        {% endif %}
+                                                                        style="margin: 7px;">{{ restaurant.count_reviews }} Reseñas</span>
+
                                     </div>
                                     <p data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
                                        data-aos-once="true"
-                                       class="type_restaurant">{{ restaurant.description }}</p>
+                                       class="type_restaurant">{{ restaurant.category }}</p>
                                     <div data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
                                          data-aos-once="true"
                                          class="loca_phone_div"><a class="phone" href="#"><i
@@ -218,9 +264,12 @@
                                 </div>
                         </a>
                         </div><!-- End: Card-figo-class-medal -->
+
                     {% endif %}
                     {% endfor %}
+
             </article>
+
         {% endfor %}
 
         <nav aria-label="Page navigation" style="max-width: 303px;margin: auto;">

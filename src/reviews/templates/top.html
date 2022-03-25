@@ -180,7 +180,7 @@
                         </div>
 
                         </div>
-                        <a class="text-decoration-none" href="profile_restaurant.html">
+                        <a class="text-decoration-none" href="{% url 'reviews:restaurant' restaurant.pk %}">
                             <div class="conten_info">
                                 <h4 data-aos="zoom-in" data-aos-duration="450" data-aos-delay="550"
                                     data-aos-once="true"
@@ -227,9 +227,9 @@
                                          class="loca_phone_div"><a class="phone" href="#"><i
                                             class="fas fa-phone-alt"></i><span
                                             class="number_phone">3057119562</span></a><a class="location"
-                                                                                         href="#"><i
+                                                                                         href="{{ restaurant.location }}"><i
                                             class="fas fa-map-marker-alt"></i><span
-                                            class="reference_location">{{ restaurant.location }}</span></a>
+                                            class="reference_location"></span></a>
                                     </div>
                                 </div>
                         </a>

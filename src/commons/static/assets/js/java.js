@@ -1,5 +1,1 @@
-$('img').click(function(){
-	var x = $(this).attr('src')
-	console.log(x);
-	console.log('hhh');
-});
+$("img").click(function(){var o=$(this).attr("src");console.log(o),console.log("hhh")});

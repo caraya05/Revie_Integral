@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load static %}
 {% block postcss %}
-   <link rel="stylesheet" href="{% static 'assets/css/map_site.compiled.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/map_site.compiled.css' %}">
 {% endblock %}
 {% block body %}
     <section class="mt-5 pt-4">
@@ -11,12 +11,21 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" value="Recuperar contraseña">Recuperar contraseña</h5><button class="btn btn-primary buton" type="button" data-bs-dismiss="modal" aria-label="close">X</button>
+                            <h5 class="modal-title" value="Recuperar contraseña">Recuperar contraseña</h5>
+                            <button class="btn btn-primary buton" type="button" data-bs-dismiss="modal"
+                                    aria-label="close">X
+                            </button>
                         </div>
                         <div class="modal-body">
                             <h6>Escriba el correo registrado</h6>
-                            <form action="{% url 'map_site' %}" method="get"><input class="form-control" type="email" placeholder="Correo" name="email">
-                                <div class="modal-footer"><button class="btn btn-primary buton" role="button" data-bs-dismiss="modal" aria-label="close">Cancelar</button><button class="btn btn-primary buton" type="submit">Enviar</button></div>
+                            <form action="{% url 'map_site' %}" method="get"><input class="form-control" type="email"
+                                                                                    placeholder="Correo" name="email">
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary buton" role="button" data-bs-dismiss="modal"
+                                            aria-label="close">Cancelar
+                                    </button>
+                                    <button class="btn btn-primary buton" type="submit">Enviar</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -28,17 +37,15 @@
                         <li><a href="{% url 'reviews:restaurant_list' %}" target="_parent">Restaurantes</a></li>
                         <li><a href="{% url 'reviews:restaurant_top' %}" target="_parent">Top Revie</a></li>
                         <li><a href="{% url 'about' %}" target="_parent">Quienes somos</a></li>
-                        <li><a href="login.html" target="_parent">Iniciar sesión</a>
+                        <li><a href="{% url 'login' %}" target="_parent">Iniciar sesión</a>
                             <ul class="list-unstyled">
-                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#olvidar" target="_blank">recuperar contraseña</a></li>
-                                <li><a href="profile_reviewer.html" target="_parent">Mi perfil reviewer</a></li>
-                                <li><a href="profile_restaurant.html" target="_parent">Mi perfil restaurante</a></li>
+                                <li><a href="#" target="_parent">perfil reviewer</a></li>
+                                <li><a href="#" target="_parent">perfil restaurante</a></li>
                             </ul>
                         </li>
                         <li><span>Registrarse</span>
                             <ul class="list-unstyled">
-                                <li><a href="register_reviewer.html" target="_parent">Registro Reviewer</a></li>
-                                <li><a href="register_restaurant.html" target="_parent">Registro Restaurante</a></li>
+                                <li><a href="{% url 'reviews:register_reviewer' %}" target="_parent">Registro Reviewer</a></li>
                             </ul>
                         </li>
                     </ul>

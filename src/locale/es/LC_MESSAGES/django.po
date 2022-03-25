@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-23 19:02-0500\n"
+"POT-Creation-Date: 2022-03-23 22:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -90,7 +90,8 @@ msgstr "Recuperar Contraseña"
 
 #: commons/views/index_view.py:81 commons/views/index_view.py:83
 msgid "Email validate, has been sent to the mail the new password."
-msgstr "Validar el correo electrónico, se ha enviado al correo la nueva contraseña."
+msgstr ""
+"Validar el correo electrónico, se ha enviado al correo la nueva contraseña."
 
 #: reviews/apps.py:7 reviews/models/review.py:90
 msgid "Reviews"
@@ -228,7 +229,7 @@ msgstr "Puntaje de comida"
 
 #: reviews/models/restaurant.py:41 reviews/models/review.py:62
 msgid "Score Environment"
-msgstr ""
+msgstr "Puntaje de ambiente"
 
 #: reviews/models/restaurant.py:44 reviews/models/review.py:66
 msgid "Score Quality Price"
@@ -256,35 +257,35 @@ msgstr "Restaurantes"
 
 #: reviews/models/review.py:48
 msgid "date"
-msgstr ""
+msgstr "Fecha"
 
 #: reviews/models/review.py:72
 msgid "Photo Two"
-msgstr ""
+msgstr "Foto 2"
 
 #: reviews/models/review.py:75
 msgid "Photo Three"
-msgstr ""
+msgstr "Foto 3"
 
 #: reviews/models/review.py:89
 msgid "Review"
-msgstr ""
+msgstr "Reseña"
 
 #: reviews/models/top_restaurant.py:14
 msgid "Number Top"
-msgstr ""
+msgstr "Numero top"
 
 #: reviews/models/top_restaurant.py:19
 msgid "Top Restaurant"
-msgstr ""
+msgstr "Top restaurante"
 
 #: reviews/models/top_restaurant.py:20
 msgid "Top Restaurants"
-msgstr ""
+msgstr "Top restaurante"
 
 #: users/apps.py:7
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
 
 #: users/managers/person_manager.py:13 users/managers/person_manager.py:26
 msgid "The given email must be set"
@@ -296,12 +297,12 @@ msgstr "El teléfono dado debe estar configurado"
 
 #: users/models/person.py:42
 msgid "Photo"
-msgstr ""
+msgstr "Foto"
 
 #: users/models/person.py:54
 msgid "Person"
-msgstr ""
+msgstr "Persona"
 
 #: users/models/person.py:55
 msgid "Persons"
-msgstr ""
+msgstr "Personas"

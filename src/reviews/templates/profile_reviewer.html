@@ -133,7 +133,8 @@
                                     {% else %}
                                         <img
                                                 class="rounded-circle"
-                                                src="{% static 'assets/img/LogoEG/Proyecto Ingenieria web - EGS S.png' %}" width="70px"
+                                                src="{% static 'assets/img/LogoEG/Proyecto Ingenieria web - EGS S.png' %}"
+                                                width="70px"
                                                 height="70px"
                                                 style="width: 55px;height: 55px;">
                                     {% endif %}
@@ -153,7 +154,7 @@
                                                         data-bs-slide-to="0"
                                                         aria-current="true" aria-label="Slide 1"
                                                         data-bs-target="#carouselExampleIndicators"></button>
-                                             {% else %}
+                                            {% else %}
                                             {% endif %}
 
                                             {% if rview.photo_one %}
@@ -293,7 +294,9 @@
                                     <h4>{{ rview.title }}</h4>
                                     <p style="font-size: 23px;">{{ rview.description }}</p>
                                 </div>
-                                <a class="text-decoration-none" href="#"></a><a class="text-decoration-none" href="#">
+                                <a class="text-decoration-none"
+                                   href="{% url 'reviews:restaurant' rview.place.id %}"></a><a
+                                    class="text-decoration-none" href="{% url 'reviews:restaurant' rview.place.id %}">
                                 <div class="d-flex flex-row conten-ref rounded-3 border border-1">
 
                                     <div style="margin-bottom: 0px;margin-left: 30px;">

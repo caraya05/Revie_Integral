@@ -44,7 +44,11 @@ def sig1(
     score = Review.objects.filter(place_id=instance.place.id)
     for i in score:
         aux = int(i.score) + aux
-    site.score = int(aux / len(score))
+    if int(len(score)) == 0:
+        site.score = 0
+    else:
+        site.score = int(aux / len(score))
+
     site.save()
 
 
@@ -71,7 +75,18 @@ def sig3(
         aux1 = int(i.score_service) + aux1
         aux2 = int(i.score_environment) + aux2
         aux3 = int(i.score_quality_price) + aux3
-    instance.score_food = int(aux / len(r))
-    instance.score_service = int(aux1 / len(r))
-    instance.score_environment = int(aux2 / len(r))
-    instance.score_quality_price = int(aux3 / len(r))
+    if int(len(r)) == 0:
+        instance.score_food = 0
+        instance.score_service = 0
+        instance.score_environment = 0
+        instance.score_quality_price = 0
+    else:
+        instance.score_food = int(aux / len(r))
+        instance.score_service = int(aux1 / len(r))
+        instance.score_environment = int(aux2 / len(r))
+        instance.score_quality_price = int(aux3 / len(r))
+
+    # instance.score_food = int(aux / len(r))
+    # instance.score_service = int(aux1 / len(r))
+    # instance.score_environment = int(aux2 / len(r))
+    # instance.score_quality_price = int(aux3 / len(r))

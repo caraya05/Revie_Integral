@@ -1,16 +1,1 @@
-var buton = document.querySelector("#envio");
-
-buton.addEventListener("click", () => {
-    var con1 = document.getElementById("password1").value;
-    var con2 = document.getElementById("password2").value;
-    var con3 = document.getElementById("password3").value;
-
-    if (con1 != con2) {
-        window.alert("Las contraseñas deben coincidir");
-
-    }
-    if (con1 == con2 && con3 != "") {
-        window.alert("Cambio exitoso");
-
-    }
-});
+var buton=document.querySelector("#envio");buton.addEventListener("click",()=>{var e=document.getElementById("password1").value,t=document.getElementById("password2").value,o=document.getElementById("password3").value;e!=t&&window.alert("Las contraseñas deben coincidir"),e==t&&""!=o&&window.alert("Cambio exitoso")});
